@@ -4,7 +4,7 @@ import logo from '../img/logo.jpg'
 import SignIn from './SignIn'
 import SignUp from './SignUp'
 
-function Navbar() {
+function SearchBar() {
     return (
         <div className="container-el-nav">
             <Link className="logo" exact to="/"><img src={logo}></img></Link>
@@ -23,4 +23,4 @@ function Navbar() {
         </div>
     )
 }
-export default Navbar;
+export default SearchBar;

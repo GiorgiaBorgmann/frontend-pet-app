@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 function Main() {
     return (
-
         <Router>
             <div >
                 <Navbar />
@@ -14,7 +13,7 @@ function Main() {
                         <Route exact path="/">
                             <Body />
                         </Route>
-                        <Route exact path="/profile">
+                        <Route exact path="/search">
                         </Route>
                     </Switch>
                 </div>
