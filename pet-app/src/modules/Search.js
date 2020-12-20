@@ -1,25 +1,19 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import logo from '../img/logo.jpg'
-import SignIn from './SignIn'
-import SignUp from './SignUp'
+import searchDetail from '../img/search-pag-d.PNG'
+import ModalFilerSearch from './ModalFilterSearch'
 
 function SearchBar() {
     return (
-        <div className="container-el-nav">
-            <Link className="logo" exact to="/"><img src={logo}></img></Link>
-
-            <ul className='nav-bar-container'>
-                <li>
-                    <Link className="link-search" to="/search">Find your dog</Link>
-                </li>
-                <li>
-                    <SignIn />
-                </li>
-                <li>
-                    <SignUp />
-                </li>
-            </ul>
+        <div className="container-search">
+            <div>
+                <div className="title-search">Adoption proposal</div>
+                <div className="input-search-container">
+                    <input className="input-search" type="text"></input>
+                    <ModalFilerSearch />
+                    <button className="button-search" type="submit">Search</button>
+                </div>
+            </div>
+            <img className="detail-search" src={searchDetail}></img>
         </div>
     )
 }

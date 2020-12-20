@@ -127,6 +127,7 @@ code {
 
 .container-el-nav {
   display: flex;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
 }
@@ -136,17 +137,6 @@ code {
   height: 60px;
   margin: 1% 0 1% 5%;
 }
-
-/* 
-.container-el-nav input {
-  background-color: #2741cc;
-  border: none;
-  height: 30px;
-  color: white;
-  width: 400px;
-  border-radius: 5px;
-  padding: 2% 5%;
-} */
 
 /* MODAL  */
 
@@ -286,4 +276,189 @@ code {
   color: #2741cc;
   font-size: 2rem;
   font-weight: 600;
+}
+
+/* SEARCH */
+
+.container-search {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.container-search img {
+  margin-top: -100px;
+  height: 250px;
+  margin-left: 240px;
+}
+
+.title-search {
+  color: #2741cc;
+  font-size: 4rem;
+  font-weight: 800;
+  margin-top: -25px;
+}
+
+.input-search {
+  border: 3px solid #f2dcdd;
+  border-radius: 10px;
+  width: 65%;
+  padding: 2% 3%;
+  color: #2741cc;
+}
+
+.input-search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3%;
+}
+
+.button-search {
+  background-color: #2741cc;
+  color: white;
+  padding: 2%;
+  border: none;
+  margin-left: 2%;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.button-search:hover {
+  background-color: #f2dcdd;
+  color: #2741cc;
+}
+
+/* CARD */
+
+.container-card {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2dcdd;
+  border-radius: 10px;
+  width:   25%;
+  margin: 2% 3%;
+}
+.photo-container{
+  display: flex;
+  justify-content: end;
+  width: 100%;
+}
+.detail-card{
+  height:100px;
+  margin: 2% 1% 3% 10%;
+}
+.photo-dog{
+  margin-top: 5%;
+  height: 130px;
+}
+.info-container-card{
+  background-color: white;
+  margin: 3%;
+  width: 70%;
+  padding: 3% 7%;
+  color: #2741cc;
+  font-weight: 600;
+  border-radius: 10px;
+}
+.card-button{
+  background-color: #2741cc;
+  border: none;
+  border-radius: 5px;
+  padding: 2% 5%;
+  margin-bottom: 4%;
+  width:45%;
+  font-size: 1rem;
+  color: white;
+}
+.card-button:hover{
+  background-color: white;
+  color: #2741cc;
+}
+/* MODAL SEARCH */
+
+.filter-modal{
+  background-color: #f2dcdd;
+  color: #2741cc;
+  width: 50px;
+  margin-left: 7%;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  padding: 18% 5%;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+.filter-modal:hover{
+  background-color: #2741cc;
+  color: #f2dcdd;
+}
+.filter{
+  height: 50px;
+  width: 1000px;
+}
+.search-title{
+  color: #2741cc;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 600;
+}
+.form-search-input{
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.max-min{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.max-min input{
+  width: 33.5%;
+  margin: 0 2%;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 1% 3%;
+}
+.label-search, .max-min label{
+  color: #2741cc;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.mesures{
+  line-height: 0.5;
+}
+.bottom-search{
+  margin-top: 3%;
+}
+.bottom-search input{
+  margin: 0 2%;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 1% 3%;
+  width: 25%;
+}
+.top-search label{
+  margin-right: 10px;
+}
+.top-search select{
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+.search-btn{
+  width: 100%;
+  margin-top: 4%;
+  font-size: 1rem;
+  padding: 2% 5%;
+  border: none;
+  border-radius: 10px;
+  color: #f2dcdd;
+  background-color: #2741cc;
+}
+.search-btn:hover{
+  color: #2741cc;
+  background-color: white;
 }
