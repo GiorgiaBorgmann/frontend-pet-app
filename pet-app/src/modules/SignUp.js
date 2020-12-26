@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Modal from 'react-modal';
 import logo from '../img/logo.jpg'
-import singin from '../img/sing-in-blue.PNG'
+import axios from './axios'
+
 
 const customStyles = {
     content: {
@@ -23,6 +24,32 @@ const customStyles = {
 const SignUp = () => {
 
     const [modalIsOpen, setIsOpen] = useState(false)
+    const [name, setName] = useState('')
+    const [lastName, setLastName] = useState('')
+    const [phone, setPhone] = useState('')
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const [confPassword, setConfPassword] = useState('')
+
+    const handleName = event => {
+        setName(event.target.value)
+    }
+    const handleLastName = event => {
+        setLastName(event.target.value)
+    }
+    const handlePhone = event => {
+        setPhone(event.target.value)
+    }
+    const handleEmail = event => {
+        setEmail(event.target.value)
+    }
+    const handlePassword = event => {
+        setPassword(event.target.value)
+    }
+    const handleConfPassword = event => {
+        setConfPassword(event.target.value)
+    }
+
     const openModal = () => {
         setIsOpen(true);
     }
@@ -30,8 +57,32 @@ const SignUp = () => {
     const closeModal = () => {
         setIsOpen(false);
     }
+    //useEffect(() => {
+    //         }
+    //         creatUser()
+    //     } 
+    // }, [])
+    // if (password === confPassword) {
+    const creatUser = async (event) => {
+        event.preventDefault()
+        const response = await axios.post("/user/register", {
+            name: name,
+            lastName: lastName,
+            phone: phone,
+            email: email,
+            password: password
+        })
+        const logIn = await axios.post("/user/login", {
+            email: email,
+            password: password
+        })
+        console.log(logIn)
+    }
+
+
     return (
         <div>
+            {console.log(name)}
             <div className="link-sign-up" onClick={openModal}>SignUp</div>
             <Modal
                 isOpen={modalIsOpen}
@@ -51,22 +102,22 @@ const SignUp = () => {
                             <div className="name-container">
                                 <div className="name-sign-up">
                                     <label>First name</label>
-                                    <input className="name-sign-up-input" type="text"></input>
+                                    <input onChange={event => handleName(event)} className="name-sign-up-input" type="text"></input>
                                 </div>
                                 <div className="last-name-sign-up">
                                     <label>Last name</label>
-                                    <input className="name-sign-up-input" type="text"></input>
+                                    <input onChange={event => handleLastName(event)} className="name-sign-up-input" type="text"></input>
                                 </div>
                             </div>
                             <label>Phone number</label>
-                            <input className="input-la" type="tel"></input>
+                            <input onChange={event => handlePhone(event)} className="input-la" type="tel"></input>
                             <label> Email</label>
-                            <input className="input-la" type="email"></input>
+                            <input onChange={event => handleEmail(event)} className="input-la" type="email"></input>
                             <label> Password</label>
-                            <input className="input-la" type="password"></input>
+                            <input onChange={event => handlePassword(event)} className="input-la" type="password"></input>
                             <label> Confirm password</label>
-                            <input className="input-la" type="password"></input>
-                            <button type="submit">Enter</button>
+                            <input onChange={event => handleConfPassword(event)} className="input-la" type="password"></input>
+                            <button onClick={creatUser} type="submit">Enter</button>
                         </form>
                     </div>
                 </div>

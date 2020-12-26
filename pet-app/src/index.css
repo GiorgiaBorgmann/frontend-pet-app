@@ -337,23 +337,27 @@ code {
   align-items: center;
   background-color: #f2dcdd;
   border-radius: 10px;
-  width:   25%;
+  width: 25%;
   margin: 2% 3%;
 }
-.photo-container{
+
+.photo-container {
   display: flex;
   justify-content: end;
   width: 100%;
 }
-.detail-card{
-  height:100px;
+
+.detail-card {
+  height: 100px;
   margin: 2% 1% 3% 10%;
 }
-.photo-dog{
+
+.photo-dog {
   margin-top: 5%;
   height: 130px;
 }
-.info-container-card{
+
+.info-container-card {
   background-color: white;
   margin: 3%;
   width: 70%;
@@ -362,23 +366,26 @@ code {
   font-weight: 600;
   border-radius: 10px;
 }
-.card-button{
+
+.card-button {
   background-color: #2741cc;
   border: none;
   border-radius: 5px;
   padding: 2% 5%;
   margin-bottom: 4%;
-  width:45%;
+  width: 45%;
   font-size: 1rem;
   color: white;
 }
-.card-button:hover{
+
+.card-button:hover {
   background-color: white;
   color: #2741cc;
 }
+
 /* MODAL SEARCH */
 
-.filter-modal{
+.filter-modal {
   background-color: #f2dcdd;
   color: #2741cc;
   width: 50px;
@@ -390,65 +397,77 @@ code {
   border-radius: 8px;
   font-size: 1rem;
 }
-.filter-modal:hover{
+
+.filter-modal:hover {
   background-color: #2741cc;
   color: #f2dcdd;
 }
-.filter{
+
+.filter {
   height: 50px;
   width: 1000px;
 }
-.search-title{
+
+.search-title {
   color: #2741cc;
   font-size: 2rem;
   text-align: center;
   font-weight: 600;
 }
-.form-search-input{
+
+.form-search-input {
   display: flex;
   flex-flow: column;
   align-items: flex-start;
   justify-content: center;
 }
 
-.max-min{
+.max-min {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.max-min input{
+
+.max-min input {
   width: 33.5%;
   margin: 0 2%;
   border: 1px solid grey;
   border-radius: 5px;
   padding: 1% 3%;
 }
-.label-search, .max-min label{
+
+.label-search, .max-min label {
   color: #2741cc;
   font-size: 1rem;
   font-weight: 600;
 }
-.mesures{
+
+.mesures {
   line-height: 0.5;
 }
-.bottom-search{
+
+.bottom-search {
   margin-top: 3%;
 }
-.bottom-search input{
+
+.bottom-search input {
   margin: 0 2%;
   border: 1px solid grey;
   border-radius: 5px;
   padding: 1% 3%;
   width: 25%;
 }
-.top-search label{
+
+.top-search label {
   margin-right: 10px;
 }
-.top-search select{
+
+.top-search select {
   border: 1px solid gray;
   border-radius: 5px;
 }
-.search-btn{
+
+.search-btn {
   width: 100%;
   margin-top: 4%;
   font-size: 1rem;
@@ -458,7 +477,46 @@ code {
   color: #f2dcdd;
   background-color: #2741cc;
 }
-.search-btn:hover{
+
+.search-btn:hover {
   color: #2741cc;
   background-color: white;
+}
+
+.proposal {
+  background-color: #2741cc;
+  color: #f2dcdd;
+}
+
+.header-user-container {
+  display: flex;
+  align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.welcome                         {
+  font-size: 3rem;
 }

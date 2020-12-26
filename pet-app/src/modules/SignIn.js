@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Modal from 'react-modal';
 import logo from '../img/logo.jpg'
 import singin from '../img/sing-in-blue.PNG'
+import axios from './axios'
 
 const customStyles = {
     content: {
@@ -22,13 +23,34 @@ const customStyles = {
 const SignIn = () => {
 
     const [modalIsOpen, setIsOpen] = useState(false)
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
     const openModal = () => {
         setIsOpen(true);
     }
-
     const closeModal = () => {
         setIsOpen(false);
     }
+    const handleEmail = event => {
+        setEmail(event.target.value)
+    }
+    const handlePassword = event => {
+        setPassword(event.target.value)
+    }
+    const logIn = async (event) => {
+        event.preventDefault()
+        const response = await axios.post("/user/login", {
+            email: email,
+            password: password
+        })
+        if (response.status === 200) {
+            localStorage.setItem('token', response.data);
+        }
+
+    }
+
+
+
     return (
         <div>
             <div className="link-log-in" onClick={openModal}>LogIn</div>
@@ -48,10 +70,10 @@ const SignIn = () => {
                 <div className="sign-in-title">Sign In</div>
                 <form className="form-sign-in">
                     <label> Email</label>
-                    <input type="email"></input>
+                    <input onChange={event => handleEmail(event)} type="email"></input>
                     <label> Password</label>
-                    <input type="password"></input>
-                    <button type="submit">Enter</button>
+                    <input onChange={event => handlePassword(event)} type="password"></input>
+                    <button onClick={logIn} type="submit">Enter</button>
                 </form>
 
 

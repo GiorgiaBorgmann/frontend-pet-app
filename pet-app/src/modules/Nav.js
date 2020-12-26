@@ -6,6 +6,7 @@ import SignUp from './SignUp'
 
 function Navbar() {
     return (
+
         <div className="container-el-nav">
             <Link className="logo" exact to="/"><img src={logo}></img></Link>
 

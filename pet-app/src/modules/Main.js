@@ -1,14 +1,29 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Body from './Body.js'
 import Navbar from './Nav.js'
 import SearchBar from './Search'
 import DogCard from './DogCard'
+import NavbarLogIn from './NavBarLogIn'
+import HeaderUser from './HeaderUser'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import axios from 'axios'
 
 function Main() {
-    const user = true
+    const [token, setToken] = useState("")
+    useEffect(() => {
+        setToken(localStorage.getItem('token'))
+    }, [])
 
-    if (!user) {
+    // async function getUser() {
+    //     try {
+    //         const response = await axios.get('/user?ID=12345');
+    //         console.log(response);
+    //     } catch (error) {
+    //         console.error(error);
+    //     }
+    // }
+
+    if (!token) {
         return (
             <Router>
                 <div >
@@ -16,7 +31,7 @@ function Main() {
                     <div>
                         <Switch>
                             <Route exact path="/">
-                                <Body />
+                            <Body />
                             </Route>
                             <Route exact path="/search">
                                 <SearchBar />
@@ -32,11 +47,11 @@ function Main() {
         return (
             <Router>
             <div >
-            <Navbar />
+                    <NavbarLogIn />
             <div>
                 <Switch>
                     <Route exact path="/">
-                        <Body />
+                                <HeaderUser />
                     </Route>
                     <Route exact path="/search">
                                 <SearchBar />
