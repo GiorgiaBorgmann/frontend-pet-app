@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Modal from 'react-modal';
 import logo from '../img/logo.jpg'
 import axios from './axios'
-
+import { useHistory } from 'react-router-dom'
 
 const customStyles = {
     content: {
@@ -30,6 +30,7 @@ const SignUp = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [confPassword, setConfPassword] = useState('')
+    const history = useHistory()
 
     const handleName = event => {
         setName(event.target.value)
@@ -49,20 +50,12 @@ const SignUp = () => {
     const handleConfPassword = event => {
         setConfPassword(event.target.value)
     }
-
     const openModal = () => {
         setIsOpen(true);
     }
-
     const closeModal = () => {
         setIsOpen(false);
     }
-    //useEffect(() => {
-    //         }
-    //         creatUser()
-    //     } 
-    // }, [])
-    // if (password === confPassword) {
     const creatUser = async (event) => {
         event.preventDefault()
         const response = await axios.post("/user/register", {
@@ -77,6 +70,7 @@ const SignUp = () => {
             password: password
         })
         console.log(logIn)
+        history.push('/home-login')
     }
 
 

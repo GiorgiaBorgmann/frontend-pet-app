@@ -1,15 +1,19 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../img/logo.jpg'
+import { useHistory } from 'react-router-dom'
 
 
 function NavbarLogIn() {
-    const logout = () => {
+    const history = useHistory()
+    const logout = () => {        
         localStorage.removeItem('token')
+        history.push('/home')
+        const reload = window.location.reload()
     }
     return (
         <div className="container-el-nav">
-            <Link className="logo" exact to="/"><img src={logo}></img></Link>
+            <Link className="logo" exact to="/home-login"><img src={logo}></img></Link>
 
             <ul className='nav-bar-container'>
                 <li>

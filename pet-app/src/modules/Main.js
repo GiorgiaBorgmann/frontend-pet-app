@@ -14,15 +14,6 @@ function Main() {
         setToken(localStorage.getItem('token'))
     }, [])
 
-    // async function getUser() {
-    //     try {
-    //         const response = await axios.get('/user?ID=12345');
-    //         console.log(response);
-    //     } catch (error) {
-    //         console.error(error);
-    //     }
-    // }
-
     if (!token) {
         return (
             <Router>
@@ -30,7 +21,7 @@ function Main() {
                     <Navbar />
                     <div>
                         <Switch>
-                            <Route exact path="/">
+                            <Route exact path="/home">
                             <Body />
                             </Route>
                             <Route exact path="/search">
@@ -50,7 +41,7 @@ function Main() {
                     <NavbarLogIn />
             <div>
                 <Switch>
-                    <Route exact path="/">
+                            <Route exact path="/home-login">
                                 <HeaderUser />
                     </Route>
                     <Route exact path="/search">

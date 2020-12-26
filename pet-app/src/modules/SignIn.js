@@ -3,6 +3,7 @@ import Modal from 'react-modal';
 import logo from '../img/logo.jpg'
 import singin from '../img/sing-in-blue.PNG'
 import axios from './axios'
+import { useHistory } from 'react-router-dom'
 
 const customStyles = {
     content: {
@@ -21,10 +22,10 @@ const customStyles = {
     }
 };
 const SignIn = () => {
-
     const [modalIsOpen, setIsOpen] = useState(false)
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const history = useHistory()
     const openModal = () => {
         setIsOpen(true);
     }
@@ -46,10 +47,9 @@ const SignIn = () => {
         if (response.status === 200) {
             localStorage.setItem('token', response.data);
         }
-
+        history.push('/home-login')
+        const reload = window.location.reload()
     }
-
-
 
     return (
         <div>
@@ -60,11 +60,7 @@ const SignIn = () => {
                 style={customStyles}
                 contentLabel="Example Modal"
             >
-                {/* <div className="container-sing-in">
-                    <div className="blue-bg">
-                        <img src={singin} />
-                    </div> */}
-                {/* <div className="form-container"> */}
+
                 <div className="close-button" onClick={closeModal}>X</div>
                 <div className="logo-modal"><img src={logo} /></div>
                 <div className="sign-in-title">Sign In</div>
@@ -75,8 +71,6 @@ const SignIn = () => {
                     <input onChange={event => handlePassword(event)} type="password"></input>
                     <button onClick={logIn} type="submit">Enter</button>
                 </form>
-
-
             </Modal>
         </div>
     )
