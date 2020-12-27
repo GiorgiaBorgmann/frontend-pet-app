@@ -69,8 +69,12 @@ const SignUp = () => {
             email: email,
             password: password
         })
+        if (logIn.status === 200) {
+            localStorage.setItem('token', response.data);
+        }
         console.log(logIn)
         history.push('/home-login')
+        const reload = window.location.reload()
     }
 
 
