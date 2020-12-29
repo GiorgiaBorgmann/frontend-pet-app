@@ -6,8 +6,7 @@ import DogCard from './DogCard'
 import NavbarLogIn from './NavBarLogIn'
 import HeaderUser from './HeaderUser'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import axios from 'axios'
-
+import axios from './axios'
 function Main() {
     const [token, setToken] = useState("")
     useEffect(() => {
@@ -22,7 +21,7 @@ function Main() {
                     <div>
                         <Switch>
                             <Route exact path="/home">
-                            <Body />
+                                <Body />
                             </Route>
                             <Route exact path="/search">
                                 <SearchBar />
@@ -37,21 +36,21 @@ function Main() {
     else {
         return (
             <Router>
-            <div >
+                <div >
                     <NavbarLogIn />
-            <div>
-                <Switch>
+                    <div>
+                        <Switch>
                             <Route exact path="/home-login">
                                 <HeaderUser />
-                    </Route>
-                    <Route exact path="/search">
+                            </Route>
+                            <Route exact path="/search">
                                 <SearchBar />
                                 <DogCard />
-                    </Route>
-                </Switch>
-            </div>
-        </div >
-        </Router >
+                            </Route>
+                        </Switch>
+                    </div>
+                </div >
+            </Router >
         )
     }
 

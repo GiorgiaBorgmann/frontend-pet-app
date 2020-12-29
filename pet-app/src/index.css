@@ -492,6 +492,7 @@ code {
   display: flex;
   align-items: center;
 }
+/* PROFILE SETTINGS */
 
 
 
@@ -516,7 +517,3 @@ code {
 
 
 
-
-.welcome                         {
-  font-size: 3rem;
-}

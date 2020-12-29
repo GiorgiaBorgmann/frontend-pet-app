@@ -48,7 +48,7 @@ const SignIn = () => {
             localStorage.setItem('token', response.data);
         }
         history.push('/home-login')
-        const reload = window.location.reload()
+        // const reload = window.location.reload()
     }
 
     return (

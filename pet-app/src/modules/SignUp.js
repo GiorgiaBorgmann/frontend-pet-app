@@ -72,7 +72,6 @@ const SignUp = () => {
         if (logIn.status === 200) {
             localStorage.setItem('token', response.data);
         }
-        console.log(logIn)
         history.push('/home-login')
         const reload = window.location.reload()
     }
@@ -80,7 +79,7 @@ const SignUp = () => {
 
     return (
         <div>
-            {console.log(name)}
+
             <div className="link-sign-up" onClick={openModal}>SignUp</div>
             <Modal
                 isOpen={modalIsOpen}
@@ -91,7 +90,6 @@ const SignUp = () => {
                 <div className="container-sing-in">
                     <div className="blue-bg">
                         <div className="logo-modal-sign-up"><img src={logo} /></div>
-                        {/* <img src={singin} /> */}
                     </div>
                     <div className="form-container">
                         <div className="close-button" onClick={closeModal}>X</div>
