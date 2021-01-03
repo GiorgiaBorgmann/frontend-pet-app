@@ -14,6 +14,7 @@ const ProfileSettings = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [confPassword, setConfPassword] = useState('')
+    const [bio, setBio] = useState('')
     const history = useHistory()
 
     const handleName = event => {
@@ -34,19 +35,21 @@ const ProfileSettings = () => {
     const handleConfPassword = event => {
         setConfPassword(event.target.value)
     }
+    const handleBio = event => {
+        setBio(event.target.value)
+    }
     const updateUser = async (event) => {
         event.preventDefault()
-        const response = await axios.post("/user/register", {
+        const response = await axios.put(`/user/${localStorage.getItem('id')}`, {
             name: name,
             lastName: lastName,
             phone: phone,
             email: email,
-            password: password
+            password: password,
+            confPassword: confPassword,
+            bio: bio,
         })
-        const logIn = await axios.post("/user/login", {
-            email: email,
-            password: password
-        })
+
         history.push('/home-login')
         const reload = window.location.reload()
     }
@@ -56,13 +59,13 @@ const ProfileSettings = () => {
         <div>
 
             <div className="container-sing-in">
-                <div className="blue-bg">
+                {/* <div className="blue-bg">
                     <div className="logo-modal-sign-up"><img src={logo} /></div>
 
-                </div>
+                </div> */}
                 <div className="form-container">
-                    <div className="close-button" onClick={closeModal}>X</div>
-                    <div className="sign-up-title">Join our community</div>
+
+                    <div className="sign-up-title">Update your information</div>
                     <form className="form-sign-up">
                         <div className="name-container">
                             <div className="name-sign-up">
@@ -78,16 +81,17 @@ const ProfileSettings = () => {
                         <input onChange={event => handlePhone(event)} className="input-la" type="tel"></input>
                         <label> Email</label>
                         <input onChange={event => handleEmail(event)} className="input-la" type="email"></input>
+                        <label> Bio</label>
+                        <input onChange={event => handleBio(event)} className="input-la" type="password"></input>
                         <label> Password</label>
                         <input onChange={event => handlePassword(event)} className="input-la" type="password"></input>
                         <label> Confirm password</label>
                         <input onChange={event => handleConfPassword(event)} className="input-la" type="password"></input>
-                        <button onClick={creatUser} type="submit">Enter</button>
+
+                        <button onClick={updateUser} type="submit">Enter</button>
                     </form>
                 </div>
             </div>
-
-            </Modal>
         </div >
     )
 }

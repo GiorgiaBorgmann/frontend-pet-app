@@ -23,10 +23,10 @@ function NavbarLogIn() {
                     <Link className="link-search" to="/search">My pets</Link>
                 </li>
                 <li>
-                    <Link className="link-search" to="/search">Settings</Link>
+                    <Link className="link-search" to="/profile-settings">Settings</Link>
                 </li>
                 <li>
-                    <div onClick={logout} className="link-search" to="/search">logout</div>
+                    <div onClick={logout} className="link-search" to="/home">logout</div>
                 </li>
             </ul>
         </div>
