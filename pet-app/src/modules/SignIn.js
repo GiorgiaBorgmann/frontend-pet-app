@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 import logo from '../img/logo.jpg'
-import singin from '../img/sing-in-blue.PNG'
 import axios from './axios'
 import { useHistory } from 'react-router-dom'
 

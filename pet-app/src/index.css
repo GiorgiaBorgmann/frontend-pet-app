@@ -355,12 +355,19 @@ code {
 .photo-dog {
   margin-top: 5%;
   height: 130px;
+  width: 130px;
+  border-radius: 50%;
+}
+.list-dogs{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .info-container-card {
   background-color: white;
   margin: 3%;
-  width: 70%;
+  width: 75%;
   padding: 3% 7%;
   color: #2741cc;
   font-weight: 600;
@@ -482,38 +489,38 @@ code {
   color: #2741cc;
   background-color: white;
 }
-
+/* USER HEADER */
 .proposal {
   background-color: #2741cc;
   color: #f2dcdd;
+  width: 70%;
+  padding: 2% 5%;
+  display: flex;
+  justify-content: center;
+  font-size: 2.3  rem;
+  border-radius: 30px;
+  margin-top: 4%;
 }
-
+.welcome{
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: #2741cc;
+}
 .header-user-container {
   display: flex;
   align-items: center;
 }
+.header-user-container img{
+  height: 500px;
+}
+.text-user{
+  margin-left: 5%;
+}
 /* PROFILE SETTINGS */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.container-settings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 

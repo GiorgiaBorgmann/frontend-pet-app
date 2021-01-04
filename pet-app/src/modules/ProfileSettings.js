@@ -7,7 +7,6 @@ import { useHistory } from 'react-router-dom'
 
 const ProfileSettings = () => {
 
-    const [modalIsOpen, setIsOpen] = useState(false)
     const [name, setName] = useState('')
     const [lastName, setLastName] = useState('')
     const [phone, setPhone] = useState('')
@@ -40,7 +39,7 @@ const ProfileSettings = () => {
     }
     const updateUser = async (event) => {
         event.preventDefault()
-        const response = await axios.put(`/user/${localStorage.getItem('id')}`, {
+        const response = await axios.put(`/userinfo/user/${localStorage.getItem('id')}`, {
             name: name,
             lastName: lastName,
             phone: phone,
@@ -57,14 +56,12 @@ const ProfileSettings = () => {
 
     return (
         <div>
-
-            <div className="container-sing-in">
+            <div className="container-settings">
                 {/* <div className="blue-bg">
                     <div className="logo-modal-sign-up"><img src={logo} /></div>
 
                 </div> */}
-                <div className="form-container">
-
+                <div className="form-container-settings">
                     <div className="sign-up-title">Update your information</div>
                     <form className="form-sign-up">
                         <div className="name-container">
@@ -82,13 +79,13 @@ const ProfileSettings = () => {
                         <label> Email</label>
                         <input onChange={event => handleEmail(event)} className="input-la" type="email"></input>
                         <label> Bio</label>
-                        <input onChange={event => handleBio(event)} className="input-la" type="password"></input>
+                        <input onChange={event => handleBio(event)} className="input-la" type="text"></input>
                         <label> Password</label>
                         <input onChange={event => handlePassword(event)} className="input-la" type="password"></input>
                         <label> Confirm password</label>
                         <input onChange={event => handleConfPassword(event)} className="input-la" type="password"></input>
-
                         <button onClick={updateUser} type="submit">Enter</button>
+                        <br></br>
                     </form>
                 </div>
             </div>
