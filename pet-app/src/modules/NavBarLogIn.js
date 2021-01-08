@@ -8,6 +8,7 @@ function NavbarLogIn() {
     const history = useHistory()
     const logout = () => {        
         localStorage.removeItem('token')
+        localStorage.removeItem('role')
         history.push('/home')
         const reload = window.location.reload()
     }
@@ -17,10 +18,10 @@ function NavbarLogIn() {
 
             <ul className='nav-bar-container'>
                 <li>
-                    <Link className="link-search" to="/search">Find your dog</Link>
+                    <Link className="link-search" to="/search">Find your pet</Link>
                 </li>
                 <li>
-                    <Link className="link-search" to="/search">My pets</Link>
+                    <Link className="link-search" to="/my-pets">My pets</Link>
                 </li>
                 <li>
                     <Link className="link-search" to="/profile-settings">Settings</Link>

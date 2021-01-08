@@ -34,8 +34,6 @@ function HeaderUser() {
     console.log(localStorage.getItem('role'))
     return (
         <div className="header-user-container">
-            {/* ${infoUser.data.name} ${infoUser.data.lastName} */}
-            <img src={photo}></img>
             <div className="text-user">
                 <div className="welcome">{`Welcome ${infoUser ? infoUser.data.name : "loading"} ${infoUser ? infoUser.data.lastName : "loading"}`}</div>
                 <div className="welcome">to the The Waiting Game!</div>

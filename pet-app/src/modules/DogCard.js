@@ -1,8 +1,13 @@
 import React from 'react'
 import CardDetail from '../img/card-detail.PNG'
-import Dog1 from '../img/dog1.PNG'
+import { useHistory } from 'react-router-dom'
 
 function DogCard({ dog }) {
+    const history = useHistory()
+    const redirectPetPage = () => {
+        console.log("redirect", dog)
+        history.push(`/pet-page/${dog._id}`)
+    }
     return (
         <div className="container-card">
             <div className="photo-container">
@@ -12,11 +17,12 @@ function DogCard({ dog }) {
             <div className='info-container-card'>
                 <div>Name: {dog.Name}</div>
                 <div>Type: {dog.type} </div>
-                <div>Height: {dog.height}</div>
-                <div>Weight: {dog.weight}</div>
+                <div>Height: {dog.height} cm</div>
+                <div>Weight: {dog.weight} kg</div>
                 <div>Adoption status: {dog.adoptionStatus}</div>
             </div>
-            <button className="card-button">Get to know each other</button>
+            <button onClick={redirectPetPage} className="card-button">Get to know each other</button>
+
         </div>
     )
 }

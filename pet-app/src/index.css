@@ -5,6 +5,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Poppins', sans-serif;
+  height: 100%;
+  background-size: cover;
 }
 
 code {
@@ -358,7 +360,8 @@ code {
   width: 130px;
   border-radius: 50%;
 }
-.list-dogs{
+
+.list-dogs {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -489,7 +492,9 @@ code {
   color: #2741cc;
   background-color: white;
 }
+
 /* USER HEADER */
+
 .proposal {
   background-color: #2741cc;
   color: #f2dcdd;
@@ -497,25 +502,44 @@ code {
   padding: 2% 5%;
   display: flex;
   justify-content: center;
-  font-size: 2.3  rem;
+  font-size: 2.2rem;
   border-radius: 30px;
-  margin-top: 4%;
+
 }
-.welcome{
+
+.welcome {
   font-size: 3.5rem;
   font-weight: 600;
   color: #2741cc;
+  text-align: center;
 }
+
 .header-user-container {
   display: flex;
   align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-size: cover;
+  background: url("img/background1.JPG") no-repeat center center fixed ;
+  height: 85vh;
+
 }
-.header-user-container img{
+
+.header-user-container img {
   height: 500px;
-}
-.text-user{
   margin-left: 5%;
 }
+
+.text-user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  background-color: rgb(242, 220, 221, 0.7);
+  padding: 3% 8%;
+  border-radius: 30px;
+}
+
 /* PROFILE SETTINGS */
 
 .container-settings {
@@ -524,3 +548,152 @@ code {
   align-items: center;
 }
 
+/* PET PAGE */
+.pet-page-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f2dcdd;
+  padding: 5% 0 0.5% 0;
+}
+.pet-detail{
+  height: 300px;
+}
+.pet-photo{
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  margin-left: -50px;
+}
+.container-photo-pet-name{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+.container-photo-pet{
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.name-pet{
+  background-color: #2741cc;
+  color: white;
+  padding: 5% 10%;
+  border-radius: 15px;
+  font-size: 1.8rem;
+  margin: 10% 0 10% 10%;
+}
+.text-pet{
+  border: 5px solid white;
+  border-radius: 20px;
+  padding: 2%;
+  width: 40%;
+  margin-right: 16%;
+  margin-top: -5%;
+}
+
+.info-container{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.white-container1-pet, .white-container2-pet{
+  background-color: white;
+  color: #2741cc;
+  padding: 2%;
+  width: 50%;
+  border-radius: 20px;  
+  margin-bottom: 3%;
+}
+.white-container1-pet{
+  margin-right: 5%;
+}
+.bio-pet{
+  background-color: #2741cc;
+  padding: 5%;
+  color: white;
+  border-radius: 20px;
+  margin-bottom: 2%;
+}
+.adoption-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3%;
+}
+.adoption-status-label{
+  color: #2741cc;
+}
+.adoption-status{
+background-color: white;
+color: #2741cc;
+padding: 2%;
+border-radius: 15px;
+margin-left: 3%;
+}
+.button-pet-adopt, .button-pet-save{
+  background-color: #2741cc;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 5%;
+  font-size: 1.2rem;
+}
+.button-pet-adopt:hover, .button-pet-save:hover{
+  background-color: white;
+  color: #2741cc;
+  
+}
+.button-pet-adopt, .button-pet-adopt-disabled{
+  margin-right: 3%;
+}
+.button-pet-adopt-disabled{
+  background-color: rgb(233, 233, 233);
+  color: #2741cc;
+  border: none;
+  border-radius: 20px;
+  padding: 5%;
+  font-size: 1.2rem;
+}
+.container-buttons-pet{
+  display: flex;
+  justify-content: space-between;
+}
+
+/* MY PETS */
+.toggle-button-container{
+  display: flex;
+  justify-content: center;
+}
+.toggle-button{  
+  background-color: #2741cc;
+  color: white;
+  padding: 2% 5%;
+  font-size: 1.3rem;
+  border-radius: 15px;
+}
+.toggle-button:hover{
+  background-color: #f2dcdd;
+  color: #2741cc;
+}
+.container-my-pets-page{
+  background: url("img/background1.JPG") ;
+  height: 100%;
+  padding: 1% 0;
+}
+.no-pets-container{
+  display: flex;
+  justify-content: center;
+  align-items: center ;
+  height: 66vh;
+}
+.no-pets{
+  font-size: 3rem;
+  color: #2741cc;
+  font-weight: 600;
+  background-color: #f2dcdd;
+  border-radius: 20px;
+  padding: 2% 4%; 
+  margin-top: -2%;
+}

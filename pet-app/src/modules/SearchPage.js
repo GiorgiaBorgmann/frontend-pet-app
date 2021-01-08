@@ -5,6 +5,7 @@ import axios from './axios'
 
 function SearchPage() {
     const [petList, setPetList] = useState("")
+    const [search, setSearch] = useState("")
     useEffect(() => {
         const getPetList = async () => {
             const petList = await axios.get("/pet/pet-list")
@@ -13,16 +14,20 @@ function SearchPage() {
 
         getPetList()
     }, [])
-    console.log(petList)
+    // console.log(petList)
+
+    const filter = petList && petList.filter((dog) => dog.type.toLowerCase().includes(search)
+
+    )
+    console.log(filter)
     return (
         <div className="container-search-page">
-            <SearchBar />
+            <SearchBar setSearch={setSearch} search={search} />
             <div className="list-dogs">
-                {petList && petList.map((dog, index) => (
+                {filter && filter.map((dog, index) => (
                     < DogCard key={index} dog={dog} />
                 ))}
             </div>
-
         </div>
     )
 }

@@ -44,11 +44,17 @@ const SignIn = () => {
             password: password
         })
         if (response.status === 200) {
-            localStorage.setItem('token', response.data);
+            localStorage.setItem('token', response.data.token);
+            localStorage.setItem('role', response.data.role);
         }
-        history.push('/home-login')
-        // const reload = window.location.reload()
+        if (localStorage.getItem('role') === "basic") {
+            history.push('/home-login')
+        } else {
+            history.push('/adm')
+        }
+        const reload = window.location.reload()
     }
+    
 
     return (
         <div>

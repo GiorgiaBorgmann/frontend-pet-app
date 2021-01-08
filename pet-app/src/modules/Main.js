@@ -6,20 +6,23 @@ import NavbarLogIn from './NavBarLogIn'
 import NavBarAdm from './NavBarAdm'
 import HeaderUser from './HeaderUser'
 import AddPet from './AddPet'
+import PetPage from './PetPage'
+import MyPets from './MyPets'
 import ProfileSettings from './ProfileSettings'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 function Main() {
     const [token, setToken] = useState("")
     const [role, setRole] = useState("")
+    const [savedPetsList, setSavedPetsList] = useState("")
+    const [adoptedPetsList, setAdoptedPetsList] = useState("")
     useEffect(() => {
         setToken(localStorage.getItem('token'))
         setRole(localStorage.getItem('role'))
     }, [])
-    console.log(role)
     console.log(token)
-    // if (role && role === "basic") {
     if (token) {
+        if (role && role === "basic") {
             return (
                 <Router>
                     <div >
@@ -35,15 +38,20 @@ function Main() {
                                 <Route exact path="/profile-settings">
                                     <ProfileSettings />
                                 </Route>
+                                <Route path="/pet-page/:id">
+                                    <PetPage savedPetsList={savedPetsList} setSavedPetsList={setSavedPetsList} adoptedPetsList={adoptedPetsList} setAdoptedPetsList={setAdoptedPetsList} />
+                                </Route>
+                                <Route path="/my-pets">
+                                    <MyPets savedPetsList={savedPetsList} setSavedPetsList={setSavedPetsList} adoptedPetsList={adoptedPetsList} setAdoptedPetsList={setAdoptedPetsList} />
+                                </Route>
                             </Switch>
                         </div>
                     </div >
                 </Router >
             )
         }
-
-    else if (role && role === "admin") {
-        return (
+        else if (role && role === "admin") {
+            return (
             <Router>
                 <div >
                     <NavBarAdm />
@@ -60,6 +68,14 @@ function Main() {
                 </div>
             </Router >
         )
+    }
+        else {
+            return (
+                <Router>
+                    <NavbarLogIn />
+                </Router>
+            )
+        }
     }
     else {
         return (
