@@ -553,25 +553,30 @@ code {
   justify-content: space-between;
   align-items: center;
   background-color: #f2dcdd;
+  height:85vh;
   padding: 5% 0 0.5% 0;
 }
 
 .pet-detail {
   height: 300px;
+  margin-bottom: 5%;
 }
 
 .pet-photo {
-  height: 250px;
-  width: 250px;
+  height: 230px;
+  width: 230px;
   border-radius: 50%;
-  margin-left: -50px;
+  margin-top: -200px;
+  margin-left: -120px;
 }
 
 .container-photo-pet-name {
   display: flex;
   flex-flow: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  height: 100%;
+  width: 50%;
 }
 
 .container-photo-pet {
@@ -586,15 +591,22 @@ code {
   padding: 5% 10%;
   border-radius: 15px;
   font-size: 1.8rem;
-  margin: 10% 0 10% 10%;
-}
+  font-weight: 600;
 
+}
+.pet-border-container{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  height: 60vh;
+}
 .text-pet {
   border: 5px solid white;
   border-radius: 20px;
   padding: 2%;
-  width: 40%;
-  margin-right: 16%;
+  width: 50%;
+  height:70%;
+  margin-right: 10%;
   margin-top: -5%;
 }
 
@@ -611,6 +623,7 @@ code {
   width: 50%;
   border-radius: 20px;
   margin-bottom: 3%;
+  font-weight: 600;
 }
 
 .white-container1-pet {
@@ -618,22 +631,32 @@ code {
 }
 
 .bio-pet {
-  background-color: #2741cc;
+  background-color: white;
   padding: 5%;
-  color: white;
+  color: #2741cc;
   border-radius: 20px;
   margin-bottom: 2%;
+  font-weight: 600;
+  height:100%;
 }
 
 .adoption-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  margin-top: -200px;
   margin-bottom: 3%;
+  margin-left: 5%;
 }
 
 .adoption-status-label {
   color: #2741cc;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border: 2px solid #2741cc;
+  padding: 1% 2% ;
+  border-radius: 15px;
 }
 
 .adoption-status {
@@ -644,16 +667,17 @@ code {
   margin-left: 3%;
 }
 
-.button-pet-adopt-disabled, .button-pet-adopt, .button-pet-save {
+.button-pet-unsaved, .button-pet-adopt-disabled, .button-pet-adopt, .button-pet-save {
   background-color: #2741cc;
   color: white;
   border: none;
   border-radius: 20px;
   padding: 5%;
   font-size: 1.2rem;
+  width:50%;
 }
 
-.button-pet-adopt:hover, .button-pet-save:hover {
+.button-pet-unsaved:hover, .button-pet-adopt:hover, .button-pet-save:hover {
   background-color: white;
   color: #2741cc;
 }
@@ -813,6 +837,7 @@ h1 {
   align-items: space-between;
   background: url("img/background1.JPG") no-repeat center center fixed;
 }
+
 .card-user-info {
   display: flex;
   flex-flow: column;
@@ -821,47 +846,52 @@ h1 {
   border-radius: 20px;
   width: 40%;
   padding: 2%;
-  background-color: #f2dcdd;  
-  margin:5%;
+  background-color: #f2dcdd;
+  margin: 5%;
   height: 55vh;
   color: #2741cc;
   font-weight: 600;
 }
-.flex-text-card{
+
+.flex-text-card {
   display: flex;
   flex-flow: column;
   justify-content: space-between;
-
 }
-.text-user-card{
+
+.text-user-card {
   margin-top: 2%;
 }
-.user-bio-card{
+
+.user-bio-card {
   background-color: white;
   border-radius: 10px;
   width: 80%;
   padding: 2%;
   height: 80%;
   margin-top: 3%;
-
 }
+
 .flex-text-user-page {
   display: flex;
   justify-content: space-between;
   width: 85%;
 }
-.title-user-card{
+
+.title-user-card {
   border: 2px solid white;
   border-radius: 15px;
   padding: 1% 4%;
 }
-.list-dogs-card{  
+
+.list-dogs-card {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-.title-user-pets{
+
+.title-user-pets {
   font-size: 2rem;
   color: white;
   font-weight: 600;
@@ -869,21 +899,25 @@ h1 {
   padding: 0.5% 4%;
   border-radius: 15px;
 }
+
 /* 
 PET DETAIL INFORMATION ADM */
-.photo-pet-card-adm{
+
+.photo-pet-card-adm {
   border-radius: 50%;
   width: 100px;
   height: 100px;
 }
-.card-photo-container{
-height: 100%;
-margin-right:3%;
-display: flex;
-align-items: center;
-justify-content: flex-start;
+
+.card-photo-container {
+  height: 100%;
+  margin-right: 3%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
-.list-pet-card{
+
+.list-pet-card {
   background-color: #f2dcdd;
   margin-top: 2%;
   padding: 2% 5%;

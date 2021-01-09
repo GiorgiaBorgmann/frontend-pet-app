@@ -4,7 +4,6 @@ import logo from '../img/logo.jpg'
 import axios from './axios'
 import { useHistory } from 'react-router-dom'
 
-
 const ProfileSettings = () => {
 
     const [name, setName] = useState('')

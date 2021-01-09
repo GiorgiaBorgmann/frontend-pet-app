@@ -79,11 +79,15 @@ function PetPage({ adoptedPetsList, setAdoptedPetsList, savedPetsList, setSavedP
     return (
         <div className="pet-page-container">
             <div className="container-photo-pet-name">
+                <div className="name-pet">Hi, I'm {pet.Name} :)</div>
                 <div className="container-photo-pet">
                     <img className="pet-detail" src={photo} />
                     <img className="pet-photo" src={pet.photoURL}></img>
                 </div>
-                <div className="name-pet">Hi, I'm {pet.Name} :)</div>
+                <div className="adoption-container">
+                    <div className="adoption-status-label">Adoption Status: {pet.adoptionStatus}</div>
+                </div>
+
             </div>
             <div className="text-pet">
                 <div className="pet-box">
@@ -101,10 +105,7 @@ function PetPage({ adoptedPetsList, setAdoptedPetsList, savedPetsList, setSavedP
                             </div>
                         </div>
                         <div className="bio-pet">Bio: {pet.bio}</div>
-                        <div className="adoption-container">
-                            <div className="adoption-status-label">Adoption Status: </div>
-                            <div className="adoption-status">{pet.adoptionStatus}</div>
-                        </div>
+
                         <div className="container-buttons-pet">
                             <button
                                 onClick={adoptPet}
@@ -112,7 +113,7 @@ function PetPage({ adoptedPetsList, setAdoptedPetsList, savedPetsList, setSavedP
                                 disabled={checkIfAdopted}>
                                 Give this cutie a home
                                 </button>
-                            <button onClick={toggleSavePet} className="button-pet-save">{textButtonSavePet}</button>
+                            <button onClick={toggleSavePet} className={savedPet ? 'button-pet-unsaved' : "button-pet-save"}>{textButtonSavePet}</button>
                         </div>
                     </div>
                 </div>
