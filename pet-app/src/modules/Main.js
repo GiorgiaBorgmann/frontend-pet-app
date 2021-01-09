@@ -5,9 +5,11 @@ import SearchPage from './SearchPage.js'
 import NavbarLogIn from './NavBarLogIn'
 import NavBarAdm from './NavBarAdm'
 import HeaderUser from './HeaderUser'
+import Dashboard from './Dashboard'
 import AddPet from './AddPet'
 import PetPage from './PetPage'
 import MyPets from './MyPets'
+import UserInfoDash from './UserDeailsAdm'
 import ProfileSettings from './ProfileSettings'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
@@ -58,11 +60,14 @@ function Main() {
                     <div>
                         <Switch>
                             <Route exact path="/adm">
-                                <div>Dashboard</div>
+                                    <Dashboard />
                             </Route>
                             <Route exact path="/add-pet">
                                 <AddPet />
-                            </Route>
+                                </Route>
+                                <Route exact path="/user-info-adm/:id">
+                                    <UserInfoDash />
+                                </Route>
                         </Switch>
                     </div>
                 </div>

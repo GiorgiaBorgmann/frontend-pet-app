@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import logo from '../img/logo.jpg'
 import axios from './axios'
 import { useHistory } from 'react-router-dom'
 import Cloudinary from './Cloudinary';
 
 
 const ProfileSettings = () => {
-
     const [name, setName] = useState('')
     const [type, setType] = useState('')
     const [adoptionStatus, setAdoptionStatus] = useState('')
@@ -17,9 +15,7 @@ const ProfileSettings = () => {
     const [hypoallergenic, setHypoallergenic] = useState('')
     const [diet, setDiet] = useState('')
     const [photoURL, setPhotoURL] = useState('')
-    // const [imgName, setImgName] = useEffect('')
     const history = useHistory()
-
     const handleName = event => {
         setName(event.target.value)
     }
@@ -47,10 +43,6 @@ const ProfileSettings = () => {
     const handleDiet = event => {
         setDiet(event.target.value)
     }
-    // const handlePhoto = event => {
-    //     setPhotoURL(event.target.value)
-    // }
-
     const uploadImg = (img) => {
         let photoURL = img.info.url;
         setPhotoURL(photoURL);
@@ -76,10 +68,6 @@ const ProfileSettings = () => {
     return (
         <div>
             <div className="container-settings">
-                {/* <div className="blue-bg">
-                    <div className="logo-modal-sign-up"><img src={logo} /></div>
-
-                </div> */}
                 <div className="form-container-settings">
                     <div className="sign-up-title">Add a pet</div>
                     <Cloudinary uploadImg={uploadImg} />

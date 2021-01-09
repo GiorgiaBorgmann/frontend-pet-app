@@ -18,7 +18,7 @@ function NavbarLogIn() {
 
             <ul className='nav-bar-container'>
                 <li>
-                    <Link className="link-search" to="/dashboard">Dashboard</Link>
+                    <Link className="link-search" to="/adm">Dashboard</Link>
                 </li>
                 <li>
                     <Link className="link-search" to="/add-pet">Add pet</Link>

@@ -11,7 +11,9 @@ function PetPage({ adoptedPetsList, setAdoptedPetsList, savedPetsList, setSavedP
     console.log(id)
     const [pet, setPet] = useState("")
     const [savedPet, setSavedPet] = useState("")
+    const [textButtonSavePet, setTextButtonSavePet] = useState("Save and think about it")
     const checkIfAdopted = pet && pet.adoptionStatus.toLowerCase().includes('adopted')
+    
 
     useEffect(() => {
         const petInfo = async () => {
@@ -41,15 +43,17 @@ function PetPage({ adoptedPetsList, setAdoptedPetsList, savedPetsList, setSavedP
                 'Content-Type': 'application/json'
             }
         })
-        history.push('/my-pets')
+        // history.push('/my-pets')
     }
     const toggleSavePet = () => {
-        if (savedPet === false) {
+        if (savedPet === true) {
             savePet()
-            setSavedPet(true)
+            setSavedPet(false)
+            setTextButtonSavePet("Unsave Pet")
         } else {
             unsavePet()
-            setSavedPet(false)
+            setSavedPet(true)
+            setTextButtonSavePet("Save and think about it")
         }
     }
     const adoptPet = async () => {
@@ -101,7 +105,7 @@ function PetPage({ adoptedPetsList, setAdoptedPetsList, savedPetsList, setSavedP
                                 disabled={checkIfAdopted}>
                                 Give this cutie a home
                                 </button>
-                            <button onClick={toggleSavePet} className="button-pet-save">Save and think about it</button>
+                            <button onClick={toggleSavePet} className="button-pet-save">{textButtonSavePet}</button>
                         </div>
                     </div>
                 </div>

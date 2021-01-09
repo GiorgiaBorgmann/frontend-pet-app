@@ -504,7 +504,6 @@ code {
   justify-content: center;
   font-size: 2.2rem;
   border-radius: 30px;
-
 }
 
 .welcome {
@@ -520,9 +519,8 @@ code {
   justify-content: center;
   height: 100%;
   background-size: cover;
-  background: url("img/background1.JPG") no-repeat center center fixed ;
+  background: url("img/background1.JPG") no-repeat center center fixed;
   height: 85vh;
-
 }
 
 .header-user-container img {
@@ -549,34 +547,40 @@ code {
 }
 
 /* PET PAGE */
-.pet-page-container{
+
+.pet-page-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #f2dcdd;
   padding: 5% 0 0.5% 0;
 }
-.pet-detail{
+
+.pet-detail {
   height: 300px;
 }
-.pet-photo{
+
+.pet-photo {
   height: 250px;
   width: 250px;
   border-radius: 50%;
   margin-left: -50px;
 }
-.container-photo-pet-name{
+
+.container-photo-pet-name {
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: center;
 }
-.container-photo-pet{
+
+.container-photo-pet {
   display: flex;
   width: 100%;
   align-items: center;
 }
-.name-pet{
+
+.name-pet {
   background-color: #2741cc;
   color: white;
   padding: 5% 10%;
@@ -584,7 +588,8 @@ code {
   font-size: 1.8rem;
   margin: 10% 0 10% 10%;
 }
-.text-pet{
+
+.text-pet {
   border: 5px solid white;
   border-radius: 20px;
   padding: 2%;
@@ -593,46 +598,53 @@ code {
   margin-top: -5%;
 }
 
-.info-container{
+.info-container {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
-.white-container1-pet, .white-container2-pet{
+
+.white-container1-pet, .white-container2-pet {
   background-color: white;
   color: #2741cc;
   padding: 2%;
   width: 50%;
-  border-radius: 20px;  
+  border-radius: 20px;
   margin-bottom: 3%;
 }
-.white-container1-pet{
+
+.white-container1-pet {
   margin-right: 5%;
 }
-.bio-pet{
+
+.bio-pet {
   background-color: #2741cc;
   padding: 5%;
   color: white;
   border-radius: 20px;
   margin-bottom: 2%;
 }
-.adoption-container{
+
+.adoption-container {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 3%;
 }
-.adoption-status-label{
+
+.adoption-status-label {
   color: #2741cc;
 }
-.adoption-status{
-background-color: white;
-color: #2741cc;
-padding: 2%;
-border-radius: 15px;
-margin-left: 3%;
+
+.adoption-status {
+  background-color: white;
+  color: #2741cc;
+  padding: 2%;
+  border-radius: 15px;
+  margin-left: 3%;
 }
-.button-pet-adopt, .button-pet-save{
+
+.button-pet-adopt-disabled ,.button-pet-adopt, .button-pet-save {
   background-color: #2741cc;
   color: white;
   border: none;
@@ -640,60 +652,138 @@ margin-left: 3%;
   padding: 5%;
   font-size: 1.2rem;
 }
-.button-pet-adopt:hover, .button-pet-save:hover{
+
+.button-pet-adopt:hover, .button-pet-save:hover {
   background-color: white;
   color: #2741cc;
-  
 }
-.button-pet-adopt, .button-pet-adopt-disabled{
+
+.button-pet-adopt, .button-pet-adopt-disabled {
   margin-right: 3%;
 }
-.button-pet-adopt-disabled{
-  background-color: rgb(233, 233, 233);
-  color: #2741cc;
-  border: none;
-  border-radius: 20px;
-  padding: 5%;
-  font-size: 1.2rem;
+
+.button-pet-adopt-disabled {
+  opacity: 0.7;
 }
-.container-buttons-pet{
+
+.container-buttons-pet {
   display: flex;
   justify-content: space-between;
 }
 
 /* MY PETS */
-.toggle-button-container{
+
+.toggle-button-container {
   display: flex;
   justify-content: center;
 }
-.toggle-button{  
+
+.toggle-button {
   background-color: #2741cc;
   color: white;
   padding: 2% 5%;
   font-size: 1.3rem;
   border-radius: 15px;
 }
-.toggle-button:hover{
+
+.toggle-button:hover {
   background-color: #f2dcdd;
   color: #2741cc;
 }
-.container-my-pets-page{
-  background: url("img/background1.JPG") ;
+
+.container-my-pets-page {
+  background: url("img/background1.JPG");
   height: 100%;
   padding: 1% 0;
 }
-.no-pets-container{
+
+.no-pets-container {
   display: flex;
   justify-content: center;
-  align-items: center ;
+  align-items: center;
   height: 66vh;
 }
-.no-pets{
+
+.no-pets {
   font-size: 3rem;
   color: #2741cc;
   font-weight: 600;
   background-color: #f2dcdd;
   border-radius: 20px;
-  padding: 2% 4%; 
+  padding: 2% 4%;
   margin-top: -2%;
+}
+/* USER CARD */
+.container-card-users{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f2dcdd;
+  border-radius: 15px;
+  padding: 3%;
+  margin:3% 0 0 1%;
+}
+.detail-card-user{
+  height: 70px;
+  margin-right: 5%;
+}
+.flex-text-user{
+  display: flex;
+  width: 320px;
+  justify-content: space-between;
+  color: #2741cc;
+  font-weight: 600;
+}
+.card-button-user{
+  background-color: #2741cc;
+  color:white;
+  border: none;
+  border-radius: 8px;
+  padding: 1.5% 7%;
+  margin-right: 20%;
+  margin-top: 10px;
+}
+.card-button-user:hover{
+  background-color: white;
+  color:#2741cc;
+}
+/* PET CARD */
+.flex-text-pet{
+  display: flex;
+  width: 320px;
+  justify-content: space-between;
+  color: #2741cc;
+  font-weight: 600;
+}
+.status-pet{
+  margin-right: 20%;
+}
+.photo-pet{
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  margin-right: 5%;
+}
+/* DASHBOARD */
+.container-card-dashboard{
+display: flex;
+flex-flow: column;
+align-items: center;
+}
+h2{
+  color:#2741cc;
+  display: flex;
+  justify-content: center ;
+}
+h1{
+  color: #2741cc;
+  font-weight: 600;
+  font-size: 4rem;
+  margin: 0;
+}
+.list-container-dashboard{
+  margin-top: -30px;
+  display: flex;
+  width: 80%;
+  justify-content: space-around;
 }
