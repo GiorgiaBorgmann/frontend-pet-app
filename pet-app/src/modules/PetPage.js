@@ -6,14 +6,11 @@ import { useParams } from "react-router";
 
 function PetPage({ adoptedPetsList, setAdoptedPetsList, savedPetsList, setSavedPetsList }) {
     const history = useHistory()
-
     let { id } = useParams()
-    console.log(id)
     const [pet, setPet] = useState("")
-    const [savedPet, setSavedPet] = useState("")
-    const [textButtonSavePet, setTextButtonSavePet] = useState("Save and think about it")
-    const checkIfAdopted = pet && pet.adoptionStatus.toLowerCase().includes('adopted')
-    
+    const [savedPet, setSavedPet] = useState(savedPetsList && savedPetsList.filter(pet => pet._id === id).length > 0)
+    const [textButtonSavePet, setTextButtonSavePet] = useState(savedPet ? "Unsaved Pet" : "Save and think about it")
+    const checkIfAdopted = pet && pet.adoptionStatus.toLowerCase().includes('adopted')    
 
     useEffect(() => {
         const petInfo = async () => {
@@ -24,7 +21,18 @@ function PetPage({ adoptedPetsList, setAdoptedPetsList, savedPetsList, setSavedP
         }
         petInfo()
     }, [])
+    const getSavedPetsList = async () => {
 
+        const petList = await axios.get(`/userinfo/list-saved-pets/${localStorage.getItem('id')}`, {
+            headers: {
+                'auth-token': localStorage.getItem('token'),
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            }
+        })
+        setSavedPetsList(petList.data.savePets)
+        setAdoptedPetsList(petList.data.adoptedPets)
+    }
     const savePet = async () => {
         const savePet = await axios.put(`/userinfo/save-pet`, pet, {
             headers: {
@@ -33,7 +41,7 @@ function PetPage({ adoptedPetsList, setAdoptedPetsList, savedPetsList, setSavedP
                 'Content-Type': 'application/json'
             }
         })
-        history.push('/my-pets')
+        getSavedPetsList()
     }
     const unsavePet = async () => {
         const savePet = await axios.put(`/userinfo/unsave-pet`, pet, {
@@ -43,22 +51,21 @@ function PetPage({ adoptedPetsList, setAdoptedPetsList, savedPetsList, setSavedP
                 'Content-Type': 'application/json'
             }
         })
-        // history.push('/my-pets')
+        getSavedPetsList()
     }
     const toggleSavePet = () => {
-        if (savedPet === true) {
+        if (savedPet === false) {
             savePet()
-            setSavedPet(false)
+            setSavedPet(true)
             setTextButtonSavePet("Unsave Pet")
         } else {
             unsavePet()
-            setSavedPet(true)
+            setSavedPet(false)
             setTextButtonSavePet("Save and think about it")
         }
     }
     const adoptPet = async () => {
         pet.adoptionStatus = "Adopted"
-        console.log({ adoptedPet: pet })
         const adoptPet = await axios.put(`/userinfo/adopt-pet/${id}`, pet, {
             headers: {
                 'auth-token': localStorage.getItem('token'),

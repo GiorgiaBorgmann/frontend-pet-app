@@ -26,7 +26,6 @@ function Dashboard({ dog }) {
         setPetList(PetListResponse.data)
         setUsersList(usersListResponse.data)
     }, [])
-    console.log(usersList)
     return (
         <div className="container-card-dashboard">
             <h1>Welcome</h1>

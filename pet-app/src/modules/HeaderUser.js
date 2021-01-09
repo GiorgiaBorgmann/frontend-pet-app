@@ -14,7 +14,6 @@ function HeaderUser() {
                     'Content-Type': 'application/json'
                 }
             })
-            console.log(response)
             if (response.status === 200) {
                 localStorage.setItem('id', response.data._id);
             }
@@ -31,7 +30,7 @@ function HeaderUser() {
         userInfo()
         
     }, [])
-    console.log(localStorage.getItem('role'))
+
     return (
         <div className="header-user-container">
             <div className="text-user">

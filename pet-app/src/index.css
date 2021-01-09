@@ -644,7 +644,7 @@ code {
   margin-left: 3%;
 }
 
-.button-pet-adopt-disabled ,.button-pet-adopt, .button-pet-save {
+.button-pet-adopt-disabled, .button-pet-adopt, .button-pet-save {
   background-color: #2741cc;
   color: white;
   border: none;
@@ -713,77 +713,180 @@ code {
   padding: 2% 4%;
   margin-top: -2%;
 }
+
 /* USER CARD */
-.container-card-users{
+
+.container-card-users {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #f2dcdd;
   border-radius: 15px;
   padding: 3%;
-  margin:3% 0 0 1%;
+  margin: 3% 0 0 1%;
 }
-.detail-card-user{
+
+.detail-card-user {
   height: 70px;
   margin-right: 5%;
 }
-.flex-text-user{
+
+.flex-text-user {
   display: flex;
   width: 320px;
   justify-content: space-between;
   color: #2741cc;
   font-weight: 600;
 }
-.card-button-user{
+
+.card-button-user {
   background-color: #2741cc;
-  color:white;
+  color: white;
   border: none;
   border-radius: 8px;
   padding: 1.5% 7%;
   margin-right: 20%;
   margin-top: 10px;
 }
-.card-button-user:hover{
+
+.card-button-user:hover {
   background-color: white;
-  color:#2741cc;
+  color: #2741cc;
 }
+
 /* PET CARD */
-.flex-text-pet{
+
+.flex-text-pet {
   display: flex;
   width: 320px;
   justify-content: space-between;
   color: #2741cc;
   font-weight: 600;
 }
-.status-pet{
+
+.status-pet {
   margin-right: 20%;
 }
-.photo-pet{
+
+.photo-pet {
   height: 70px;
   width: 70px;
   border-radius: 50%;
   margin-right: 5%;
 }
+
 /* DASHBOARD */
-.container-card-dashboard{
-display: flex;
-flex-flow: column;
-align-items: center;
-}
-h2{
-  color:#2741cc;
+
+.container-card-dashboard {
   display: flex;
-  justify-content: center ;
+  flex-flow: column;
+  align-items: center;
 }
-h1{
+
+h2 {
+  color: #2741cc;
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
   color: #2741cc;
   font-weight: 600;
   font-size: 4rem;
   margin: 0;
 }
-.list-container-dashboard{
+
+.list-container-dashboard {
   margin-top: -30px;
   display: flex;
   width: 80%;
   justify-content: space-around;
+}
+
+/* USER DETAILS ADM */
+
+.container-user-info {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  align-items: space-between;
+  background: url("img/background1.JPG") no-repeat center center fixed;
+}
+.card-user-info {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  width: 40%;
+  padding: 2%;
+  background-color: #f2dcdd;  
+  margin:5%;
+  height: 55vh;
+  color: #2741cc;
+  font-weight: 600;
+}
+.flex-text-card{
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+
+}
+.text-user-card{
+  margin-top: 2%;
+}
+.user-bio-card{
+  background-color: white;
+  border-radius: 10px;
+  width: 80%;
+  padding: 2%;
+  height: 80%;
+  margin-top: 3%;
+
+}
+.flex-text-user-page {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+}
+.title-user-card{
+  border: 2px solid white;
+  border-radius: 15px;
+  padding: 1% 4%;
+}
+.list-dogs-card{  
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.title-user-pets{
+  font-size: 2rem;
+  color: white;
+  font-weight: 600;
+  background-color: #2741cc;
+  padding: 0.5% 4%;
+  border-radius: 15px;
+}
+/* 
+PET DETAIL INFORMATION ADM */
+.photo-pet-card-adm{
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+.card-photo-container{
+height: 100%;
+margin-right:3%;
+display: flex;
+align-items: center;
+justify-content: flex-start;
+}
+.list-pet-card{
+  background-color: #f2dcdd;
+  margin-top: 2%;
+  padding: 2% 5%;
+  width: 35%;
+  border-radius: 20px;
 }

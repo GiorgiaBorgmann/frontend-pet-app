@@ -5,8 +5,7 @@ import { useHistory } from 'react-router-dom'
 function DogCard({ pet }) {
     const history = useHistory()
     const redirectPetPage = () => {
-        console.log("redirect", pet)
-        history.push(`/pet-page/${pet._id}`)
+        history.push(`/pet-page-adm/${pet._id}`)
     }
     return (
         <div className="container-card-users">

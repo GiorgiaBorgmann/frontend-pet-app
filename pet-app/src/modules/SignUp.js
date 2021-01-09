@@ -70,7 +70,8 @@ const SignUp = () => {
             password: password
         })
         if (logIn.status === 200) {
-            localStorage.setItem('token', response.data);
+            localStorage.setItem('token', logIn.data.token);
+            localStorage.setItem('role', logIn.data.role);
         }
         history.push('/home-login')
         const reload = window.location.reload()

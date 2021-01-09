@@ -14,12 +14,8 @@ function SearchPage() {
 
         getPetList()
     }, [])
-    // console.log(petList)
-
     const filter = petList && petList.filter((dog) => dog.type.toLowerCase().includes(search)
-
     )
-    console.log(filter)
     return (
         <div className="container-search-page">
             <SearchBar setSearch={setSearch} search={search} />

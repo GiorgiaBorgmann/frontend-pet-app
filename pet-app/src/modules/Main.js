@@ -11,18 +11,18 @@ import PetPage from './PetPage'
 import MyPets from './MyPets'
 import UserInfoDash from './UserDeailsAdm'
 import ProfileSettings from './ProfileSettings'
+import PetDetailsAdm from './PetDetailsAdm'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 function Main() {
     const [token, setToken] = useState("")
     const [role, setRole] = useState("")
-    const [savedPetsList, setSavedPetsList] = useState("")
-    const [adoptedPetsList, setAdoptedPetsList] = useState("")
+    const [savedPetsList, setSavedPetsList] = useState([])
+    const [adoptedPetsList, setAdoptedPetsList] = useState([])
     useEffect(() => {
         setToken(localStorage.getItem('token'))
         setRole(localStorage.getItem('role'))
     }, [])
-    console.log(token)
     if (token) {
         if (role && role === "basic") {
             return (
@@ -67,6 +67,9 @@ function Main() {
                                 </Route>
                                 <Route exact path="/user-info-adm/:id">
                                     <UserInfoDash />
+                                </Route>
+                                <Route exact path="/pet-page-adm/:id">
+                                    <PetDetailsAdm />
                                 </Route>
                         </Switch>
                     </div>
