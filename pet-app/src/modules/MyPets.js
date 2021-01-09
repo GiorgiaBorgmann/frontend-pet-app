@@ -12,7 +12,6 @@ function MyPets({ adoptedPetsList, setAdoptedPetsList, savedPetsList, setSavedPe
                 headers: {
                     'auth-token': localStorage.getItem('token'),
                     'Accept': 'application/json',
-                    'Content-Type': 'application/json'
                 }
             })
             setSavedPetsList(petList.data.savePets)
