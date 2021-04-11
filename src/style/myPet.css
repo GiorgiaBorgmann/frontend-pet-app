@@ -6,19 +6,37 @@
     
   }
   
-  .toggle-button {
+  .toggle-button , .toggle-button-option{
     background-color: #2741cc;
     color: white;
     padding: 2% 5%;
     font-size: 1.3rem;
     border-radius: 15px;
+    margin-left: 5%;
     height: 30px;
+    cursor: pointer;
   }
-  
-  .toggle-button:hover {
+  .toggle-button:hover, .toggle-button-option:hover  {
+    background-color: #6379fa ;
+    color: white;
+  }
+
+  .toggle-button-pink, .toggle-button-pink-option{
     background-color: #f2dcdd;
     color: #2741cc;
+    padding: 2% 5%;
+    font-size: 1.3rem;
+    border-radius: 15px;
+    height: 30px;
+    cursor: pointer;
+    margin-left: 5%;
   }
+  
+  .toggle-button-pink:hover, .toggle-button-pink-option:hover{
+    background-color: #f5aeb1;
+    color: white;
+  }
+  
   
   .container-my-pets-page {
     background: url("../img/background1.JPG");

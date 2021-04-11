@@ -20,69 +20,45 @@ function MyPets({ adoptedPetsList, setAdoptedPetsList, savedPetsList, setSavedPe
         }
         getSavedPetsList()
     }, [setAdoptedPetsList, setSavedPetsList])
-    const togglePet = () => {
-        if (pageToggle === true) {
-            setPageToggle(false)
-        } else {
-            setPageToggle(true)
-        }
-    }
+    
+    const showSavedPets = () => (
+        setPageToggle(true)
+    )
+    const showAdoptedPets = () => (
+        setPageToggle(false)
+    )
+
     if (pageToggle === true) {
-        if (savedPetsList !== "") {
-            return (
-                <div className="container-my-pets-page">
-                    <div className="toggle-button-container">
-                        <div className="toggle-button" onClick={togglePet}>Saved Pets</div>
-                    </div>
-                    <div className="list-dogs">
-                        {savedPetsList && savedPetsList.map((dog, index) => (
-                            < DogCard key={index} dog={dog} />
-                        ))}
-                    </div>
 
+        return (
+            <div className="container-my-pets-page">
+                <div className="toggle-button-container">
+                    <div className={pageToggle ? 'toggle-button' : 'toggle-button-pink'} onClick={showSavedPets}>Saved Pets</div>
+                    <div className={pageToggle ? 'toggle-button-pink-option' : 'toggle-button-option'} onClick={showAdoptedPets}>My pet family</div>
                 </div>
-            )
-        } else {
+                <div className="list-dogs">
+                    {savedPetsList && savedPetsList.map((dog, index) => (
+                        < DogCard key={index} dog={dog} />
+                    ))}
+                </div>
 
-            return (
-                <div className="container-my-pets-page">
-                    <div className="toggle-button-container">
-                        <div className="toggle-button" onClick={togglePet}>Saved Pets</div>
-                    </div>
-                    <div className="no-pets-container">
-                        <div className="no-pets">You don't have saved pets yet :/</div>
-                    </div>
-
+            </div>
+        )
+    }
+    else {
+        return (
+            <div className="container-my-pets-page" >
+                <div className="toggle-button-container">
+                    <div className={pageToggle ? 'toggle-button' : 'toggle-button-pink'} onClick={showSavedPets}>Saved Pets</div>
+                    <div className={pageToggle ? 'toggle-button-pink-option' : 'toggle-button-option'} onClick={showAdoptedPets}>My pet family</div>
                 </div>
-            )
-        }
-    } else {
-        if (adoptedPetsList !== "") {
-            return (
-                <div className="container-my-pets-page" >
-                    <div className="toggle-button-container">
-                        <div className="toggle-button" onClick={togglePet}>My pet family</div>
-                    </div>
-                    <div className="list-dogs">
-                        {adoptedPetsList && adoptedPetsList.map((dog, index) => (
-                            < DogCard key={index} dog={dog} />
-                        ))}
-                    </div>
+                <div className="list-dogs">
+                    {adoptedPetsList && adoptedPetsList.map((dog, index) => (
+                        < DogCard key={index} dog={dog} />
+                    ))}
                 </div>
-            )
-        }
-        else {
-            return (
-                <div className="container-my-pets-page" >
-                    <div className="toggle-button-container">
-                        <div className="toggle-button" onClick={togglePet}>My pet family</div>
-                    </div>
-                    <div className="no-pets-container">
-                        <div className="no-pets">You don't have adopted pets yet :/</div>
-                    </div>
-                </div>
-            )
-        }
+            </div>
+        )
     }
 }
 export default MyPets;
