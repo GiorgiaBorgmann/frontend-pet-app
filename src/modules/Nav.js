@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import logo from '../img/logo.jpg'
 import SignIn from './SignIn'
 import SignUp from './SignUp'
+import '../style/navBar.css'
 
 function Navbar() {
     return (

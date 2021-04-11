@@ -3,6 +3,7 @@ import photo from '../img/pet-page.PNG'
 import axios from './axios'
 import { useHistory } from 'react-router-dom'
 import { useParams } from "react-router";
+import '../style/petPage.css'
 
 function PetPage({ setAdoptedPetsList, savedPetsList, setSavedPetsList }) {
     const history = useHistory()

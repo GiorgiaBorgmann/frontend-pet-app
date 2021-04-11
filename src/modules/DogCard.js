@@ -1,6 +1,7 @@
 import React from 'react'
 import CardDetail from '../img/card-detail.PNG'
 import { useHistory } from 'react-router-dom'
+import '../style/card.css'
 
 function DogCard({ dog }) {
     const history = useHistory()

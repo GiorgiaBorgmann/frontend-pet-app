@@ -3,6 +3,7 @@ import Modal from 'react-modal';
 import logo from '../img/logo.jpg'
 import axios from './axios'
 import { useHistory } from 'react-router-dom'
+import '../style/modal.css'
 
 const customStyles = {
     content: {

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import DogCard from './DogCard'
 import { useParams } from "react-router";
 import axios from './axios'
+import '../style/userDetailAdm.css'
 
 function UserInfo() {
     let { id } = useParams()

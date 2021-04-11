@@ -3,6 +3,7 @@
 .toggle-button-container {
     display: flex;
     justify-content: center;
+    
   }
   
   .toggle-button {
@@ -11,6 +12,7 @@
     padding: 2% 5%;
     font-size: 1.3rem;
     border-radius: 15px;
+    height: 30px;
   }
   
   .toggle-button:hover {
@@ -19,9 +21,10 @@
   }
   
   .container-my-pets-page {
-    background: url("img/background1.JPG");
+    background: url("../img/background1.JPG");
     height: 100%;
     padding: 1% 0;
+    height: 86vh;
   }
   
   .no-pets-container {

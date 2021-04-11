@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: center;
     align-items: space-between;
-    background: url("img/background1.JPG") no-repeat center center fixed;
+    background: url("../img/background1.JPG") no-repeat center center fixed;
   }
   
   .card-user-info {

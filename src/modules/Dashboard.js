@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import axios from './axios'
 import UserCard from './UserCard'
 import PetDashboardCard from './PetDashboarCard'
+import '../style/dashboard.css'
+
 function Dashboard({ dog }) {
     const [usersList, setUsersList] = useState("")
     const [petList, setPetList] = useState("")

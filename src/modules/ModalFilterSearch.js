@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 import logo from '../img/logo.jpg'
+import '../style/modalSearch.css'
 
 const customStyles = {
     content: {

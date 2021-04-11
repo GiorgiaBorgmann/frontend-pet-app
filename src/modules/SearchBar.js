@@ -1,6 +1,7 @@
 import React from 'react'
 import searchDetail from '../img/search-pag-d.PNG'
 import ModalFilerSearch from './ModalFilterSearch'
+import '../style/search.css'
 
 function SearchBar({ setSearch, search }) {
     const searchInput = (e) => {

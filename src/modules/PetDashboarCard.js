@@ -1,5 +1,7 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
+import '../style/petCard.css'
+import '../style/userCard.css'
 
 function DogCard({ pet }) {
     const history = useHistory()

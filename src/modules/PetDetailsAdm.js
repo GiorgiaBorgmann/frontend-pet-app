@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from "react-router";
 import UpdatePet from './UpdatePet'
 import axios from './axios'
+import '../style/petDetailInfoAdm.css'
+import '../style/userDetailAdm.css'
 
 function UserInfo() {
     let { id } = useParams()

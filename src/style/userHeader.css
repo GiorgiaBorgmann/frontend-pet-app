@@ -24,7 +24,7 @@
     justify-content: center;
     height: 100%;
     background-size: cover;
-    background: url("img/background1.JPG") no-repeat center center fixed;
+    background: url("../img/background1.JPG") no-repeat center center fixed;
     height: 85vh;
   }
   

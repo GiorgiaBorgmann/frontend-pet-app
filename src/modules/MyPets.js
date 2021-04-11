@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import DogCard from './DogCard'
 import axios from './axios'
+import '../style/myPet.css'
 
 function MyPets({ adoptedPetsList, setAdoptedPetsList, savedPetsList, setSavedPetsList }) {
 

@@ -3,6 +3,7 @@ import axios from './axios'
 import { useHistory } from 'react-router-dom'
 import Cloudinary from './Cloudinary';
 import { useParams } from "react-router";
+import '../style/profileSettings.css'
 
 const ProfileSettings = () => {
     let { id } = useParams()
