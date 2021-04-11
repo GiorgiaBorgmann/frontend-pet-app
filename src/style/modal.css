@@ -1,0 +1,141 @@
+
+/* MODAL  */
+
+.container-sing-in {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .blue-bg {
+    background-color: #2741cc;
+    height: 90vh;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2% 1%;
+  }
+  
+  .logo-modal-sign-up img {
+    height: 30px;
+  }
+  
+  .name-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .last-name-sign-up {
+    display: flex;
+    flex-flow: column;
+    align-self: flex-end;
+    justify-content: center;
+    width: 50%;
+    padding-left: 2%;
+  }
+  
+  .name-sign-up {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    width: 50%;
+    padding-right: 2%;
+  }
+  
+  .blue-bg img {
+    height: 250px;
+  }
+  
+  .form-container {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    height: 80vh;
+    width: 50vw;
+    padding: 5% 7%;
+    overflow: hidden;
+  }
+  
+  .form-sign-up, .form-sign-in {
+    display: flex;
+    flex-flow: column;
+  }
+  
+  .close-button {
+    display: flex;
+    justify-content: flex-end;
+    color: #2741cc;
+  }
+  
+  .close-button:hover {
+    color: #c06e73;
+  }
+  
+  .sign-in-title, .logo-modal {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .logo-modal img {
+    border-radius: 50%;
+    height: 100px;
+  }
+  
+  .sign-in-title {
+    color: #2741cc;
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-top: 5%;
+  }
+  
+  .form-sign-up label, .form-sign-in label {
+    color: #2741cc;
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 5% 0 0 0;
+  }
+  
+  .form-sign-in input {
+    border: 1px solid #c0c0c0;
+    border-radius: 4px;
+    padding: 3%;
+    color: #2741cc;
+  }
+  
+  .input-la {
+    border: 1px solid#c0c0c0;
+    border-radius: 4px;
+    padding: 2%;
+    color: #2741cc;
+  }
+  
+  .name-sign-up-input {
+    border: 1px solid #c0c0c0;
+    border-radius: 4px;
+    padding: 4%;
+    color: #2741cc;
+  }
+  
+  .form-sign-up button, .form-sign-in button {
+    background-color: #2741cc;
+    color: white;
+    padding: 4% 0;
+    border: none;
+    margin-top: 3%;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .form-sign-up button:hover, .form-sign-in button:hover {
+    background-color: white;
+    color: #2741cc;
+  }
+  
+  .sign-up-title {
+    color: #2741cc;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  

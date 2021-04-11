@@ -1,0 +1,43 @@
+/* MY PETS */
+
+.toggle-button-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .toggle-button {
+    background-color: #2741cc;
+    color: white;
+    padding: 2% 5%;
+    font-size: 1.3rem;
+    border-radius: 15px;
+  }
+  
+  .toggle-button:hover {
+    background-color: #f2dcdd;
+    color: #2741cc;
+  }
+  
+  .container-my-pets-page {
+    background: url("img/background1.JPG");
+    height: 100%;
+    padding: 1% 0;
+  }
+  
+  .no-pets-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 66vh;
+  }
+  
+  .no-pets {
+    font-size: 3rem;
+    color: #2741cc;
+    font-weight: 600;
+    background-color: #f2dcdd;
+    border-radius: 20px;
+    padding: 2% 4%;
+    margin-top: -2%;
+  }
+  

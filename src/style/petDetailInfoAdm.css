@@ -1,0 +1,24 @@
+/* 
+PET DETAIL INFORMATION ADM */
+
+.photo-pet-card-adm {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .card-photo-container {
+    height: 100%;
+    margin-right: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .list-pet-card {
+    background-color: #f2dcdd;
+    margin-top: 2%;
+    padding: 2% 5%;
+    width: 35%;
+    border-radius: 20px;
+  }

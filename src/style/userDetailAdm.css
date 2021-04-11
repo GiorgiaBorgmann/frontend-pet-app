@@ -1,0 +1,72 @@
+/* USER DETAILS ADM */
+
+.container-user-info {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    align-items: space-between;
+    background: url("img/background1.JPG") no-repeat center center fixed;
+  }
+  
+  .card-user-info {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    width: 40%;
+    padding: 2%;
+    background-color: #f2dcdd;
+    margin: 5%;
+    height: 55vh;
+    color: #2741cc;
+    font-weight: 600;
+  }
+  
+  .flex-text-card {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+  }
+  
+  .text-user-card {
+    margin-top: 2%;
+  }
+  
+  .user-bio-card {
+    background-color: white;
+    border-radius: 10px;
+    width: 80%;
+    padding: 2%;
+    height: 80%;
+    margin-top: 3%;
+  }
+  
+  .flex-text-user-page {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+  }
+  
+  .title-user-card {
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 1% 4%;
+  }
+  
+  .list-dogs-card {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .title-user-pets {
+    font-size: 2rem;
+    color: white;
+    font-weight: 600;
+    background-color: #2741cc;
+    padding: 0.5% 4%;
+    border-radius: 15px;
+  }

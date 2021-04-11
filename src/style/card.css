@@ -1,0 +1,64 @@
+
+/* CARD */
+
+.container-card {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2dcdd;
+    border-radius: 10px;
+    width: 25%;
+    margin: 2% 3%;
+  }
+  
+  .photo-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+  
+  .detail-card {
+    height: 100px;
+    margin: 2% 1% 3% 10%;
+  }
+  
+  .photo-dog {
+    margin-top: 5%;
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+  }
+  
+  .list-dogs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .info-container-card {
+    background-color: white;
+    margin: 3%;
+    width: 75%;
+    padding: 3% 7%;
+    color: #2741cc;
+    font-weight: 600;
+    border-radius: 10px;
+  }
+  
+  .card-button {
+    background-color: #2741cc;
+    border: none;
+    border-radius: 5px;
+    padding: 2% 5%;
+    margin-bottom: 4%;
+    width: 45%;
+    font-size: 1rem;
+    color: white;
+  }
+  
+  .card-button:hover {
+    background-color: white;
+    color: #2741cc;
+  }
+  

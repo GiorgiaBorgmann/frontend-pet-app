@@ -1,0 +1,45 @@
+/* USER HEADER */
+
+.proposal {
+    background-color: #2741cc;
+    color: #f2dcdd;
+    width: 70%;
+    padding: 2% 5%;
+    display: flex;
+    justify-content: center;
+    font-size: 2.2rem;
+    border-radius: 30px;
+  }
+  
+  .welcome {
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: #2741cc;
+    text-align: center;
+  }
+  
+  .header-user-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-size: cover;
+    background: url("img/background1.JPG") no-repeat center center fixed;
+    height: 85vh;
+  }
+  
+  .header-user-container img {
+    height: 500px;
+    margin-left: 5%;
+  }
+  
+  .text-user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    background-color: rgb(242, 220, 221, 0.7);
+    padding: 3% 8%;
+    border-radius: 30px;
+  }
+  

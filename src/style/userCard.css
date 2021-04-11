@@ -1,0 +1,39 @@
+/* USER CARD */
+
+.container-card-users {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f2dcdd;
+    border-radius: 15px;
+    padding: 3%;
+    margin: 3% 0 0 1%;
+  }
+  
+  .detail-card-user {
+    height: 70px;
+    margin-right: 5%;
+  }
+  
+  .flex-text-user {
+    display: flex;
+    width: 320px;
+    justify-content: space-between;
+    color: #2741cc;
+    font-weight: 600;
+  }
+  
+  .card-button-user {
+    background-color: #2741cc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 1.5% 7%;
+    margin-right: 20%;
+    margin-top: 10px;
+  }
+  
+  .card-button-user:hover {
+    background-color: white;
+    color: #2741cc;
+  }
