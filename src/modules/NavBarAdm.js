@@ -9,7 +9,7 @@ function NavbarLogIn() {
     const logout = () => {
         localStorage.removeItem('token')
         localStorage.removeItem('role')
-        history.push('/home')
+        history.push('/')
         const reload = window.location.reload()
     }
     return (
@@ -24,7 +24,7 @@ function NavbarLogIn() {
                     <Link className="link-search" to="/add-pet">Add pet</Link>
                 </li>
                 <li>
-                    <div onClick={logout} className="link-search" to="/home">logout</div>
+                    <div onClick={logout} className="link-search" to="/">logout</div>
                 </li>
             </ul>
         </div>

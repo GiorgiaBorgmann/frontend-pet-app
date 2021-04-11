@@ -9,7 +9,7 @@ function NavbarLogIn() {
     const logout = () => {        
         localStorage.removeItem('token')
         localStorage.removeItem('role')
-        history.push('/home')
+        history.push('/')
         const reload = window.location.reload()
     }
     return (
@@ -27,7 +27,7 @@ function NavbarLogIn() {
                     <Link className="link-search" to="/profile-settings">Settings</Link>
                 </li>
                 <li>
-                    <div onClick={logout} className="link-search" to="/home">logout</div>
+                    <div onClick={logout} className="link-search" exact to="/">logout</div>
                 </li>
             </ul>
         </div>

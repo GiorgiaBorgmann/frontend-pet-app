@@ -52,7 +52,7 @@ function Main() {
                 </Router >
             )
         }
-        else if (role && role === "admin") {
+        else if (role && role === "Admin") {
             return (
             <Router>
                 <div >
@@ -92,11 +92,11 @@ function Main() {
                     <Navbar />
                     <div>
                         <Switch>
-                            <Route exact path="/home">
+                            <Route exact path="/">
                                 <Body />
                             </Route>
                             <Route exact path="/search">
-
+                                <SearchPage />
                             </Route>
                         </Switch>
                     </div>
