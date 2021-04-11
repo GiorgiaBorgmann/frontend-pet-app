@@ -13,9 +13,6 @@ function Navbar() {
 
             <ul className='nav-bar-container'>
                 <li>
-                    <Link className="link-search" to="/search">Find your pet</Link>
-                </li>
-                <li>
                     <SignIn />
                 </li>
                 <li>

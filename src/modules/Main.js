@@ -95,9 +95,6 @@ function Main() {
                             <Route exact path="/">
                                 <Body />
                             </Route>
-                            <Route exact path="/search">
-                                <SearchPage />
-                            </Route>
                         </Switch>
                     </div>
                 </div >
