@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from './axios'
 import { useHistory } from 'react-router-dom'
 import Cloudinary from './Cloudinary';
@@ -51,7 +51,7 @@ const ProfileSettings = () => {
 
     const updatePet = async (event) => {
         event.preventDefault()
-        const response = await axios.put(`/pet/update/${id}`, {
+        await axios.put(`/pet/update/${id}`, {
             type: type,
             Name: name,
             adoptionStatus: adoptionStatus,
@@ -64,7 +64,7 @@ const ProfileSettings = () => {
             photoURL: photoURL
         })
         history.push('/adm')
-        const reload = window.location.reload()
+        window.location.reload()
     }
     return (
         <div>

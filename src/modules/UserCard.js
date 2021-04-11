@@ -10,7 +10,7 @@ function DogCard({ user }) {
     return (
         <div className="container-card-users">
 
-            <img className="detail-card-user" src={CardDetail}></img>
+            <img className="detail-card-user" src={CardDetail} alt='decoration'></img>
             <div>
                 <div className="flex-text-user">
                     <div>Name: {user.name} {user.lastName} </div>

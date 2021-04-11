@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 import logo from '../img/logo.jpg'
-import singin from '../img/sing-in-blue.PNG'
-import { HiFilter } from 'react-icons/fa'
 
 const customStyles = {
     content: {
@@ -40,7 +38,7 @@ const ModalFilerSearch = () => {
                 contentLabel="Example Modal"
             >
                 <div className="close-button" onClick={closeModal}>X</div>
-                <div className="logo-modal"><img src={logo} /></div>
+                <div className="logo-modal"><img src={logo} alt='logo'/></div>
                 <div className="search-title">Filter your search</div>
                 <form className="form-search-input">
                     <div className="top-search">

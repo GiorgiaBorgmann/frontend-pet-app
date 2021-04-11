@@ -11,15 +11,15 @@ function Body() {
                     <h1>The Waiting Game</h1>
                     <h3>A pet adoption proposal</h3>
                 </div>
-                <img src={titleImg}></img>
+                <img src={titleImg} alt='dog'></img>
             </div>
             <div className="bg-white-container">
-                <img src={whiteImg}></img>
+                <img src={whiteImg} alt='dog'></img>
                 <h2>I always thought it would be cool to be adopted.</h2>
             </div>
             <div className="bg-blue-container">
                 <h2>I'll be waiting...<br />to go home with you!</h2>
-                <img src={blueImg}></img>
+                <img src={blueImg} alt='dog'></img>
 
             </div>
         </div>

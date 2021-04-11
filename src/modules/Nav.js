@@ -8,7 +8,7 @@ function Navbar() {
     return (
 
         <div className="container-el-nav">
-            <Link className="logo" exact to="/"><img src={logo}></img></Link>
+            <Link className="logo" exact to="/"><img src={logo} alt='logo'></img></Link>
 
             <ul className='nav-bar-container'>
                 <li>

@@ -9,7 +9,7 @@ function SearchBar({ setSearch, search }) {
     }
     return (
         <div className="container-search">
-            <div>
+            <div className='container-input-search-bar'>
                 <div className="title-search">Adoption proposal</div>
                 <div className="input-search-container">
                     <input onChange={searchInput} className="input-search" type="text"></input>
@@ -17,7 +17,7 @@ function SearchBar({ setSearch, search }) {
                     <button className="button-search" type="submit">Search</button>
                 </div>
             </div>
-            <img className="detail-search" src={searchDetail}></img>
+            <img className="detail-search" src={searchDetail} alt='decoration'></img>
         </div>
     )
 }

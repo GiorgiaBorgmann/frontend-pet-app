@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Modal from 'react-modal';
 import logo from '../img/logo.jpg'
 import axios from './axios'
@@ -29,7 +29,6 @@ const SignUp = () => {
     const [phone, setPhone] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    const [confPassword, setConfPassword] = useState('')
     const history = useHistory()
 
     const handleName = event => {
@@ -47,9 +46,7 @@ const SignUp = () => {
     const handlePassword = event => {
         setPassword(event.target.value)
     }
-    const handleConfPassword = event => {
-        setConfPassword(event.target.value)
-    }
+    
     const openModal = () => {
         setIsOpen(true);
     }
@@ -58,7 +55,7 @@ const SignUp = () => {
     }
     const creatUser = async (event) => {
         event.preventDefault()
-        const response = await axios.post("/user/register", {
+         await axios.post("/user/register", {
             name: name,
             lastName: lastName,
             phone: phone,
@@ -74,7 +71,7 @@ const SignUp = () => {
             localStorage.setItem('role', logIn.data.role);
         }
         history.push('/home-login')
-        const reload = window.location.reload()
+        window.location.reload()
     }
 
 
@@ -90,7 +87,7 @@ const SignUp = () => {
             >
                 <div className="container-sing-in">
                     <div className="blue-bg">
-                        <div className="logo-modal-sign-up"><img src={logo} /></div>
+                        <div className="logo-modal-sign-up"><img src={logo} alt='logo'/></div>
                     </div>
                     <div className="form-container">
                         <div className="close-button" onClick={closeModal}>X</div>
@@ -112,8 +109,6 @@ const SignUp = () => {
                             <input onChange={event => handleEmail(event)} className="input-la" type="email"></input>
                             <label> Password</label>
                             <input onChange={event => handlePassword(event)} className="input-la" type="password"></input>
-                            <label> Confirm password</label>
-                            <input onChange={event => handleConfPassword(event)} className="input-la" type="password"></input>
                             <button onClick={creatUser} type="submit">Enter</button>
                         </form>
                     </div>

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import photo from '../img/user-photo.PNG'
 import axios from './axios'
 function HeaderUser() {
 

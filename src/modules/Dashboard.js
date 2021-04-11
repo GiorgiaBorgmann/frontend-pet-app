@@ -1,30 +1,31 @@
 import React, { useEffect, useState } from 'react'
-import CardDetail from '../img/card-detail.PNG'
-import { useHistory } from 'react-router-dom'
 import axios from './axios'
 import UserCard from './UserCard'
 import PetDashboardCard from './PetDashboarCard'
 function Dashboard({ dog }) {
-    const history = useHistory()
     const [usersList, setUsersList] = useState("")
     const [petList, setPetList] = useState("")
-    useEffect(async () => {
-        const usersListResponse = await axios.get("/userinfo/usersList", {
-            headers: {
-                'auth-token': localStorage.getItem('token'),
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            }
-        })
-        const PetListResponse = await axios.get("/userinfo/petsList", {
-            headers: {
-                'auth-token': localStorage.getItem('token'),
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            }
-        })
-        setPetList(PetListResponse.data)
-        setUsersList(usersListResponse.data)
+    useEffect(() => {
+        async function fetchData() {
+            const usersListResponse = await axios.get("/userinfo/usersList", {
+                headers: {
+                    'auth-token': localStorage.getItem('token'),
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                }
+            })
+            const PetListResponse = await axios.get("/userinfo/petsList", {
+                headers: {
+                    'auth-token': localStorage.getItem('token'),
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                }
+            })
+            setPetList(PetListResponse.data)
+            setUsersList(usersListResponse.data)
+        }
+        fetchData()
+
     }, [])
     return (
         <div className="container-card-dashboard">

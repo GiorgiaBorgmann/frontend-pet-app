@@ -1,26 +1,26 @@
 import React, { useState, useEffect } from 'react'
 import photo from '../img/pet-page.PNG'
 import axios from './axios'
-import { useHistory, useLocation } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import { useParams } from "react-router";
 
-function PetPage({ adoptedPetsList, setAdoptedPetsList, savedPetsList, setSavedPetsList }) {
+function PetPage({ setAdoptedPetsList, savedPetsList, setSavedPetsList }) {
     const history = useHistory()
     let { id } = useParams()
     const [pet, setPet] = useState("")
     const [savedPet, setSavedPet] = useState(savedPetsList && savedPetsList.filter(pet => pet._id === id).length > 0)
     const [textButtonSavePet, setTextButtonSavePet] = useState(savedPet ? "Unsaved Pet" : "Save and think about it")
-    const checkIfAdopted = pet && pet.adoptionStatus.toLowerCase().includes('adopted')    
+    const checkIfAdopted = pet && pet.adoptionStatus.toLowerCase().includes('adopted')
 
     useEffect(() => {
         const petInfo = async () => {
-            if (id != "") {
+            if (id !== "") {
                 const petInfo = await axios.get(`/pet/${id}`)
                 setPet(petInfo.data)
             }
         }
         petInfo()
-    }, [])
+    }, [id])
     const getSavedPetsList = async () => {
 
         const petList = await axios.get(`/userinfo/list-saved-pets/${localStorage.getItem('id')}`, {
@@ -34,7 +34,7 @@ function PetPage({ adoptedPetsList, setAdoptedPetsList, savedPetsList, setSavedP
         setAdoptedPetsList(petList.data.adoptedPets)
     }
     const savePet = async () => {
-        const savePet = await axios.put(`/userinfo/save-pet`, pet, {
+        await axios.put(`/userinfo/save-pet`, pet, {
             headers: {
                 'auth-token': localStorage.getItem('token'),
                 'Accept': 'application/json',
@@ -44,7 +44,7 @@ function PetPage({ adoptedPetsList, setAdoptedPetsList, savedPetsList, setSavedP
         getSavedPetsList()
     }
     const unsavePet = async () => {
-        const savePet = await axios.put(`/userinfo/unsave-pet`, pet, {
+        await axios.put(`/userinfo/unsave-pet`, pet, {
             headers: {
                 'auth-token': localStorage.getItem('token'),
                 'Accept': 'application/json',
@@ -66,7 +66,7 @@ function PetPage({ adoptedPetsList, setAdoptedPetsList, savedPetsList, setSavedP
     }
     const adoptPet = async () => {
         pet.adoptionStatus = "Adopted"
-        const adoptPet = await axios.put(`/userinfo/adopt-pet/${id}`, pet, {
+        await axios.put(`/userinfo/adopt-pet/${id}`, pet, {
             headers: {
                 'auth-token': localStorage.getItem('token'),
                 'Accept': 'application/json',
@@ -81,8 +81,8 @@ function PetPage({ adoptedPetsList, setAdoptedPetsList, savedPetsList, setSavedP
             <div className="container-photo-pet-name">
                 <div className="name-pet">Hi, I'm {pet.Name} :)</div>
                 <div className="container-photo-pet">
-                    <img className="pet-detail" src={photo} />
-                    <img className="pet-photo" src={pet.photoURL}></img>
+                    <img className="pet-detail" src={photo} alt='decoration' />
+                    <img className="pet-photo" src={pet.photoURL} alt='pet'></img>
                 </div>
                 <div className="adoption-container">
                     <div className="adoption-status-label">Adoption Status: {pet.adoptionStatus}</div>

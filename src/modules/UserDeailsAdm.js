@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import CardDetail from '../img/card-detail.PNG'
 import DogCard from './DogCard'
 import { useParams } from "react-router";
 import axios from './axios'
@@ -9,7 +8,7 @@ function UserInfo() {
     const [user, setUser] = useState("")
     useEffect(() => {
         const userInfo = async () => {
-            if (id != "") {
+            if (id !== "") {
                 const userInfo = await axios.get(`/userinfo/username/${id}`, {
                     headers: {
                         'auth-token': localStorage.getItem('token'),
@@ -21,7 +20,7 @@ function UserInfo() {
             }
         }
         userInfo()
-    }, [])
+    }, [id])
     console.log(user)
     return (
         <div className="container-user-info">

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import CardDetail from '../img/card-detail.PNG'
 import { useParams } from "react-router";
 import UpdatePet from './UpdatePet'
 import axios from './axios'
@@ -9,13 +8,13 @@ function UserInfo() {
     const [pet, setPet] = useState("")
     useEffect(() => {
         const petInfo = async () => {
-            if (id != "") {
+            if (id !== "") {
                 const petInfo = await axios.get(`/pet/${id}`)
                 setPet(petInfo.data)
             }
         }
         petInfo()
-    }, [])
+    }, [id])
     return (
         <div className="container-user-info">
 
@@ -24,7 +23,7 @@ function UserInfo() {
 
                 <div className="flex-text-user-page">
                     <div className="card-photo-container">
-                        <img className=" photo-pet-card-adm" src={pet.photoURL}></img>
+                        <img className=" photo-pet-card-adm" src={pet.photoURL} alt='pet'></img>
                     </div>
                     <div className="flex-text-card">
                         <div className="text-user-card">Name: {pet.Name}  </div>

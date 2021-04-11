@@ -10,11 +10,11 @@ function NavbarLogIn() {
         localStorage.removeItem('token')
         localStorage.removeItem('role')
         history.push('/')
-        const reload = window.location.reload()
+        window.location.reload()
     }
     return (
         <div className="container-el-nav">
-            <Link className="logo" exact to="/adm"><img src={logo}></img></Link>
+            <Link className="logo" exact to="/adm"><img src={logo} alt='logo'></img></Link>
 
             <ul className='nav-bar-container'>
                 <li>

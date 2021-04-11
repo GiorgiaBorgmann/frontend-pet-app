@@ -52,7 +52,7 @@ const SignIn = () => {
         } else {
             history.push('/adm')
         }
-        const reload = window.location.reload()
+        window.location.reload()
     }
     
 
@@ -67,7 +67,7 @@ const SignIn = () => {
             >
 
                 <div className="close-button" onClick={closeModal}>X</div>
-                <div className="logo-modal"><img src={logo} /></div>
+                <div className="logo-modal"><img src={logo} alt='logo'/></div>
                 <div className="sign-in-title">Sign In</div>
                 <form className="form-sign-in">
                     <label> Email</label>

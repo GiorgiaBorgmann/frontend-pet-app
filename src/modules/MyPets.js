@@ -18,7 +18,7 @@ function MyPets({ adoptedPetsList, setAdoptedPetsList, savedPetsList, setSavedPe
             setAdoptedPetsList(petList.data.adoptedPets)
         }
         getSavedPetsList()
-    }, [])
+    }, [setAdoptedPetsList, setSavedPetsList])
     const togglePet = () => {
         if (pageToggle === true) {
             setPageToggle(false)
@@ -27,7 +27,7 @@ function MyPets({ adoptedPetsList, setAdoptedPetsList, savedPetsList, setSavedPe
         }
     }
     if (pageToggle === true) {
-        if (savedPetsList != "") {
+        if (savedPetsList !== "") {
             return (
                 <div className="container-my-pets-page">
                     <div className="toggle-button-container">
@@ -56,7 +56,7 @@ function MyPets({ adoptedPetsList, setAdoptedPetsList, savedPetsList, setSavedPe
             )
         }
     } else {
-        if (adoptedPetsList != "") {
+        if (adoptedPetsList !== "") {
             return (
                 <div className="container-my-pets-page" >
                     <div className="toggle-button-container">

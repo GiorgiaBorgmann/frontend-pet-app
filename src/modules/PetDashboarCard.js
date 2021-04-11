@@ -1,5 +1,4 @@
 import React from 'react'
-import CardDetail from '../img/card-detail.PNG'
 import { useHistory } from 'react-router-dom'
 
 function DogCard({ pet }) {
@@ -9,7 +8,7 @@ function DogCard({ pet }) {
     }
     return (
         <div className="container-card-users">
-            <img className="photo-pet" src={pet.photoURL}></img>
+            <img className="photo-pet" src={pet.photoURL} alt='pet'></img>
             <div>
                 <div className="flex-text-pet">
                     <div>Name: {pet.Name} </div>

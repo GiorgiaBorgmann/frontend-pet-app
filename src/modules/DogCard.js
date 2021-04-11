@@ -10,8 +10,8 @@ function DogCard({ dog }) {
     return (
         <div className="container-card">
             <div className="photo-container">
-                <img className="photo-dog" src={dog.photoURL}></img>
-                <img className="detail-card" src={CardDetail}></img>
+                <img className="photo-dog" src={dog.photoURL} alt='animal'></img>
+                <img className="detail-card" src={CardDetail} alt='decoration'></img>
             </div>
             <div className='info-container-card'>
                 <div>Name: {dog.Name}</div>

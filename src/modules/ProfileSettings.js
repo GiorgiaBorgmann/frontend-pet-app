@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import Modal from 'react-modal';
-import logo from '../img/logo.jpg'
+import React, { useState } from 'react';
 import axios from './axios'
 import { useHistory } from 'react-router-dom'
 
@@ -38,7 +36,7 @@ const ProfileSettings = () => {
     }
     const updateUser = async (event) => {
         event.preventDefault()
-        const response = await axios.put(`/userinfo/user/${localStorage.getItem('id')}`, {
+        await axios.put(`/userinfo/user/${localStorage.getItem('id')}`, {
             name: name,
             lastName: lastName,
             phone: phone,
@@ -49,17 +47,13 @@ const ProfileSettings = () => {
         })
 
         history.push('/home-login')
-        const reload = window.location.reload()
+        window.location.reload()
     }
 
 
     return (
         <div>
             <div className="container-settings">
-                {/* <div className="blue-bg">
-                    <div className="logo-modal-sign-up"><img src={logo} /></div>
-
-                </div> */}
                 <div className="form-container-settings">
                     <div className="sign-up-title">Update your information</div>
                     <form className="form-sign-up">
